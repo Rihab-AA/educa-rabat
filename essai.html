@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display buildings in 3D</title>
+<link rel="shortcut icon" href="images\mortier.ico" />
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+<link
+href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css"
+rel="stylesheet"
+/>
+<style>
+    #menu {
+        position: absolute;
+        background: #efefef;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        }
+    body {
+        color: #404040;
+        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        }
+         
+        * {
+        box-sizing: border-box;
+        }
+         
+        .sidebar {
+        position: absolute;
+        width: 33.3333%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+        }
+         
+        .map {
+        position: absolute;
+        left: 33.3333%;
+        width: 66.6666%;
+        top: 0;
+        bottom: 0;
+        }
+         
+        h1 {
+        font-size: 22px;
+        margin: 0;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 20px 2px;
+        }
+         
+        a {
+        color: #404040;
+        text-decoration: none;
+        }
+         
+        a:hover {
+        color: #101010;
+        }
+         
+        .heading {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        min-height: 60px;
+        line-height: 60px;
+        padding: 0 10px;
+        background-color: #00853e;
+        color: #fff;
+        }
+         
+        .listings {
+        height: 100%;
+        overflow: auto;
+        padding-bottom: 60px;
+        }
+         
+        .listings .item {
+        display: block;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        text-decoration: none;
+        }
+         
+        .listings .item:last-child {
+        border-bottom: none;
+        }
+        .listings .item .title {
+        display: block;
+        color: #00853e;
+        font-weight: 700;
+        }
+         
+        .listings .item .title small {
+        font-weight: 400;
+        }
+        .listings .item.active .title,
+        .listings .item .title:hover {
+        color: #8cc63f;
+        }
+        .listings .item.active {
+        background-color: #f8f8f8;
+        }
+        ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: rgba(0, 0, 0, 0.1);
+        }
+        ::-webkit-scrollbar-track {
+        background: none;
+        }
+        ::-webkit-scrollbar-thumb {
+        background: #00853e;
+        border-radius: 0;
+        }
+         
+        .marker {
+        border: none;
+        cursor: pointer;
+        height: 56px;
+        width: 56px;
+        background-image: 'universite.png'
+        }
+         
+        /* Marker tweaks */
+        .mapboxgl-popup {
+        padding-bottom: 50px;
+        }
+         
+        .mapboxgl-popup-close-button {
+        display: none;
+        }
+        .mapboxgl-popup-content {
+        font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+        padding: 0;
+        width: 180px;
+        }
+        .mapboxgl-popup-content h3 {
+        background: #91c949;
+        color: #fff;
+        margin: 0;
+        padding: 10px;
+        border-radius: 3px 3px 0 0;
+        font-weight: 700;
+        margin-top: -15px;
+        }
+         
+        .mapboxgl-popup-content h4 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 400;
+        }
+         
+        .mapboxgl-popup-content div {
+        padding: 10px;
+        }
+         
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+        margin-top: 15px;
+        }
+         
+        .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+        border-bottom-color: #91c949;
+        }
+        </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="heading">
+        <h1>Enseignement superieur a Rabat
+        </h1>
+        </div>
+        <div id="listings" class="listings"></div>
+        </div>
+        <div id="map" class="map"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<style>
+.geocoder-dropdown-item {
+padding: 5px;
+}
+.geocoder-dropdown-icon {
+margin-right: 10px;
+}
+.geocoder-dropdown-text {
+color: #5a3fc0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: larger;
+}
+</style>
+<script>
+	// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmloYWJ1czEiLCJhIjoiY2xhMDd2NDRnMGdwaDNxbXNycmU2YjJ3biJ9.5nROirEOqU9ZDTetkpJ8rg';
+    const map = new mapboxgl.Map({
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-6.85175716777786,33.98054997733642],
+        zoom: 14,
+        pitch: 45,
+        bearing: -17.6,
+        container: 'map',
+        antialias: true
+    });
+
+    map.on('load', () => {
+        // Insert the layer beneath any symbol layer.
+        const layers = map.getStyle().layers;
+        const labelLayerId = layers.find(
+            (layer) => layer.type === 'symbol' && layer.layout['text-field']
+            ).id;
+
+        // The 'building' layer in the Mapbox Streets
+        // vector tileset contains building height data
+        // from OpenStreetMap.
+        map.addLayer(
+            {
+                'id': 'add-3d-buildings',
+                'source': 'composite',
+                'source-layer': 'building',
+                'filter': ['==', 'extrude', 'true'],
+                'type': 'fill-extrusion',
+                'minzoom': 8,
+                'paint': {
+                    'fill-extrusion-color': '#799C8E',
+
+                    // Use an 'interpolate' expression to
+                    // add a smooth transition effect to
+                    // the buildings as the user zooms in.
+                    'fill-extrusion-height': [
+                        'interpolate',
+                        ['linear'],
+                        ['zoom'],
+                        8,
+                        0,
+                        9,
+                        ['get', 'height']
+                    ],
+                    'fill-extrusion-base': [
+                        'interpolate',
+                        ['linear'],
+                        ['zoom'],
+                        8,
+                        0,
+                        9,
+                        ['get', 'min_height']
+                    ],
+                    'fill-extrusion-opacity': 0.9
+                }
+            },
+            labelLayerId
+        );
+    });
+    map.addLayer({
+        id: 'stores',
+        type: 'circle',
+        source: 'stores',
+        filter: ['has', 'point_count'],
+        paint: {
+        // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+        // with three steps to implement three types of circles:
+        //   * Blue, 20px circles when point count is less than 100
+        //   * Yellow, 30px circles when point count is between 100 and 750
+        //   * Pink, 40px circles when point count is greater than or equal to 750
+        'circle-color': [
+        'step',
+        ['get', 'point_count'],
+        '#51bbd6',
+        100,
+        '#f1f075',
+        750,
+        '#f28cb1'
+        ],
+        'circle-radius': [
+        'step',
+        ['get', 'point_count'],
+        20,
+        100,
+        30,
+        750,
+        40
+        ]
+        }
+        });
+    const geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        types: 'poi',
+        // see https://docs.mapbox.com/api/search/#geocoding-response-object for information about the schema of each response feature
+        render: function (item) {
+        // extract the item's maki icon or use a default
+        const maki = item.properties.maki || 'marker';
+        return `<div class='geocoder-dropdown-item'>
+        <img class='geocoder-dropdown-icon' src='https://unpkg.com/@mapbox/maki@6.1.0/icons/${maki}-15.svg'>
+        <span class='geocoder-dropdown-text'>
+        ${item.text}
+        </span>
+        </div>`;
+        },
+        mapboxgl: mapboxgl
+        });
+        map.addControl(geocoder);
+        //add geojson ;////////////////////////////////////////////////////////////////////////////////////////////////       
+</script>
+  <script>
+    const stores={
+        "type": "FeatureCollection",
+        "features": [
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.85626124,34.01837342 ]
+         },
+         "properties": {
+         "Institus":"Ecole Royale du Service de Santé militaire",
+         "abrv":"ERSSM",
+         "disc":"Adresse : BP 1044, Rue Hachemi Mestari, Rabat, Maroc",
+         "filieres":"-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans,-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans\n-MÃ©decine dentaire avec un cursus de 5 ans\n-MÃ©decine vÃ©tÃ©rinaire avec un cursus de 6 ans\n-Pharmacie avec un cursus de 2 ans",
+         "site":"",
+         "type":"militaire",
+         "icon":"militaire.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.846855748,34.00590903 ]
+         },
+         "properties": {
+            "Institus":"Centre d'Instruction Service Social des Far Rabat ",
+         "abrv":"CISSF",
+         "disc":"Adresse : Souissi Rabat Maroc",
+         "filieres":"sous officier d'administration 3Ans ",
+         "site":"",
+         "type":"militaire",
+         "icon":"militaire.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.880167603,33.96844725 ]
+         },
+         "properties": {
+            "Institus":"Centre d'Orientation et de Planification de l'Education Rabat",
+         "abrv":"COPE",
+         "disc":"Adresse : COPE Avenue Allal El Fassi, Hay Riad, BP : 6222 - Rabat Instituts Rabat Maroc",
+         "filieres":"",
+         "site":"https://cope.men.gov.ma/Account/Login?idApps=2",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.858856824,33.98980186 ]
+         },
+         "properties": {
+            "Institus":"Centre pédagogique Régional Rabat",
+         "abrv":"CPR",
+         "disc":"Adresse : CPR Avenue Allal Al Fassi, BP : 6210 Rabat Maroc",
+         "filieres":"",
+         "site":"",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.825920637,33.98059576 ]
+         },
+         "properties": {
+            "Institus":"Ecole Normale Supérieure-Rabat ",
+         "abrv":"ENS",
+         "disc":"Adresse : ENS Avenue Mohamed Bel Hassan El Ouazzani, BP : 5118. Takaddoum - Rabat Maroc",
+         "filieres":"",
+         "site":"http://ens.um5.ac.ma/fr/home-1",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.877365109,33.96910089 ]
+         },
+         "properties": {
+            "Institus":"Ecole Normale Supérieure de l'Enseignement Technique Rabat",
+         "abrv":"ENSET",
+         "disc":"Adresse : Avenue de l'Armée Royale, Madinat Al Irfane, B.P. 6207, Rabat, Maroc",
+         "filieres":"",
+         "site":"http://ensam.um5.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.85744295,34.00757227 ]
+         },
+         "properties": {
+            "Institus":"Centre de Formation des Inspecteurs de l'Enseignement-Rabat",
+         "abrv":"CFIE",
+         "disc":"Adresse : Rue Ibn Aïcha Bab Tamesna BP : 4543 - Rabat Maroc",
+         "filieres":"",
+         "site":"http://cfie.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.83996558,34.00711765 ]
+         },
+         "properties": {
+            "Institus":"Faculté des Lettres et des Sciences Humaines -Rabat",
+         "abrv":"FLSH",
+         "disc":"Adresse : 3, avenue Ibn Battouta B.P. : 1040",
+         "filieres":"",
+         "site":"https://www.flshr.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.87032818,33.98092966 ]
+         },
+         "properties": {
+            "Institus":"Faculté de Médecine Dentaire - Rabat",
+         "abrv":"FMD",
+         "disc":"Adresse : B.P. : 6212 Madinat Al Irfane Rabat",
+         "filieres":"http://fmd.um5.ac.ma/",
+         "site":"",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.855981367,33.98340803 ]
+         },
+         "properties": {
+            "Institus":"Faculté de Médecine et de Pharmacie",
+         "abrv":"FMP",
+         "disc":"Adresse : Av. Mohamed Belarbi El Alaoui B.P. : 6203 Rabat Institut",
+         "filieres":"",
+         "site":"http://fmp.um5.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.838228065,34.00816291 ]
+         },
+         "properties": {
+            "Institus":"Faculté des Sciences - Rabat",
+         "abrv":"FS",
+         "disc":"Adresse : 4. avenue Ibn Battouta B.P. : 1014 RP, Rabat",
+         "filieres":"",
+         "site":"http://www.fsr.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.853568798,33.99768841 ]
+         },
+         "properties": {
+            "Institus":"Ecole Mohammadia d'Ingénieurs",
+         "abrv":"EMI",
+         "disc":"EMI Avenue Ibn Sina BP : 765, Agdal - Rabat Maroc",
+         "filieres":"",
+         "site":"https://www.emi.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.853568798,33.99768841 ]
+         },
+         "properties": {
+            "Institus":"Ecole Nationale de l'Industrie Minérale",
+         "abrv":"ENIM",
+         "disc":"",
+         "filieres":"",
+         "site":"https://www.enim.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.867548251,33.98446298 ]
+         },
+         "properties": {
+            "Institus":"Ecole Nationale Supérieure d'Informatique et d'Analyse des Systémes",
+         "abrv":"ENSIAS",
+         "disc":"Adresse : Rue Mohammed Ben Abdellah Regragui, Madinat Al Irfane - Rabat Maroc",
+         "filieres":"",
+         "site":"http://ensias.um5.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.865307948,33.98231225 ]
+         },
+         "properties": {
+            "Institus":"Ecole des Sciences de l'Information",
+         "abrv":"ESI",
+         "disc":"Adresse : ESI Avenue Allal El Fassi, Madinat Al Irfane, BP : 6204 - Rabat Instituts Maroc",
+         "filieres":"",
+         "site":'http://esi.ac.ma/',
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.861369513,33.98704399 ]
+         },
+         "properties": {
+            "Institus":"Ecole Nationale d'Architecture",
+         "abrv":"ENA",
+         "disc":"Adresse : ENA Route Alal Al Fassi BP : 6372 - Rabat Instituts Maroc",
+         "filieres":"http://www.enarabat.ac.ma/",
+         "site":"",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.869955046,33.98667249 ]
+         },
+         "properties": {
+            "Institus":"Ecole de Gouvernance et d'Economie de Rabat",
+         "abrv":"EGE",
+         "disc":"Adresse : Avenue Mohammed Ben Abdellah Regragui,Madinat Al Irfane, BP 6283, AGDAL RABAT Maroc",
+         "filieres":"",
+         "site":"https://fr.wikipedia.org/wiki/%C3%89cole_de_gouvernance_et_d%27%C3%A9conomie_de_Rabat",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.880508537,33.95772332 ]
+         },
+         "properties": {
+         "Institus":"Ecole des Hautes Etudes Commerciales",
+         "abrv":"HEC",
+         "disc":"Adresse : 4, Angle rue Tulipa et Salsola, secteur 18, 10100 Hay Riad - Rabat",
+         "filieres":"",
+         "site":"https://hec.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.826619592,33.97839218 ]
+         },
+         "properties": {
+            "Institus":"Institut des Hautes Etudes de Management",
+         "abrv":"HEM",
+         "disc":"Adresse : 3, Avenue Oued Akkrache, Lotissement Mouline, Souissi Rabat Maroc",
+         "filieres":"",
+         "site":"https://hem.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.866760894,33.97667146 ]
+         },
+         "properties": {
+            "Institus":"Institut agronomique et vétérinaire Hassan II",
+         "abrv":"IAV",
+         "disc":"Adresse : IAV Route Alal lfassi Al Erfane BP : 6202 - Rabat Instituts Maroc",
+         "filieres":"",
+         "site":"https://iav.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.862729491,33.98570171 ]
+         },
+         "properties": {
+            "Institus":"Institut d'Etudes et de Recherches pour l'Arabisation",
+         "abrv":"IERA",
+         "disc":"",
+         "filieres":"",
+         "site":"http://iera.um5.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.86722641,33.98063262 ]
+         },
+         "properties": {
+            "Institus":"Institut National des Postes et Télécommunications",
+         "abrv":"INPT",
+         "disc":"",
+         "filieres":"",
+         "site":"https://inpt.ac.ma/",
+         "type":"public",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.845628834,34.0051031 ]
+         },
+         "properties": {
+            "Institus":"Institut supérieur d'ingénierie et des affaires",
+         "abrv":"isga",
+         "disc":"Adresse : 2 Avenue Allal Al Fassi, Madinat Al Irfane, Rabat, Institut",
+         "filieres":"https://www.isga.ma/",
+         "site":"",
+         "type":"Privé",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.847861719,34.0026842 ]
+         },
+         "properties": {
+            "Institus":"Ecole Supérieure des Sciences et Technologies de l'Ingénierie",
+         "abrv":"ESSTI",
+         "disc":"Adresse : 18, rue Oued Baht 10090, Agdal-Rabat",
+         "filieres":"",
+         "site":"",
+         "type":"Privé",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.837575533,33.97195265 ]
+         },
+         "properties": {
+            "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+         "abrv":"EMSI souissi",
+         "disc":"Adresse : Angles Rues Zerhoune, Ejoukak et Ait Brahim, Souissi, Rabat, Maroc",
+         "filieres":"",
+         "site":"https://essti.ac.ma/",
+         "type":"Privé",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.847515871,34.00894633 ]
+         },
+         "properties": {
+            "Institus":"ecole d'art et design",
+         "abrv":"EAD",
+         "disc":"",
+         "filieres":"",
+         "site":"http://ead.ma/",
+         "type":"Privé",
+         "icon":"universite.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.874645336,33.97308529 ]
+         },
+         "properties": {
+            "Institus":"Centre National pour la Recherche Scientifique et Technique)",
+         "abrv":"CNRST",
+         "disc":"",
+         "filieres":"",
+         "site":"https://www.cnrst.ma/index.php/fr/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.860910979,33.98796576 ]
+         },
+         "properties": {
+            "Institus":"Institut National d'Aménagement et d'Urbanisme",
+         "abrv":"INAU",
+         "disc":"",
+         "filieres":"",
+         "site":"https://inau.ac.ma/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.845113769,34.00510296 ]
+         },
+         "properties": {
+            "Institus":"L'Ecole Marocaine d'Ingénierie",
+         "abrv":"EMG",
+         "disc":"",
+         "filieres":"",
+         "site":"https://www.emg.ac.ma/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.827688082,33.98594638 ]
+         },
+         "properties": {
+            "Institus":"L'Ecole Marocaine de Banque et de Commerce International",
+         "abrv":"EMBCI",
+         "disc":"",
+         "filieres":"",
+         "site":"https://embci.com/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.851124356,34.00056388 ]
+         },
+         "properties": {
+            "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+         "abrv":"EMSI",
+         "disc":"",
+         "filieres":"",
+         "site":"https://www.emsi.ma/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.844428126,34.00241236 ]
+         },
+         "properties": {
+            "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+         "abrv":"emsi agdal",
+         "disc":"",
+         "filieres":"",
+         "site":"https://www.emsi.ma/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       },
+       
+       {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates":  [ -6.839187338,34.01438958 ]
+         },
+         "properties": {
+            "Institus":"Ecole Nationale Supérieure de l'Administration",
+         "abrv":"ENSA",
+         "disc":"",
+         "filieres":"",
+         "site":"http://www.ensa.org.ma/",
+         "type":"Privé",
+         "icon":"prive.png",
+         "iconsize":[50,50]
+         }
+       }
+     ]
+     };
+     /**
+* Assign a unique id to each store. You'll use this `id`
+* later to associate each point on the map with a listing
+* in the sidebar.
+*/
+stores.features.forEach((store, i) => {
+    store.properties.id = i;
+    });
+     
+    /**
+    * Wait until the map loads to make changes to the map.
+    */
+    map.on('load', () => {
+        map.addLayer({
+            'id': 'locations',
+            /* Add a GeoJSON source containing place coordinates and information. */
+            'source': 'stores',
+             'type':'circle',
+        'paint': {
+                'circle-radius': 20,
+                'circle-stroke-width': 2,
+                'circle-color': 'red',
+                'circle-stroke-color': 'white'
+        }
+          });  
+         /**
+          * This is where your '.addLayer()' used to be, instead
+          * add only the source without styling a layer
+          */
+         
+         
+         /**
+          * Add all the things to the page:
+          * - The location listings on the side of the page
+          * - The markers onto the map
+          */
+         buildLocationList(stores);
+         addMarkers();
+      });
+     
+    /**
+    * Add a marker to the map for every store listing.
+    **/
+    function addMarkers() {
+    /* For each feature in the GeoJSON object above: */
+    for (const marker of stores.features) {
+    /* Create a div element for the marker. */
+    const el = document.createElement('div');
+    /* Assign a unique `id` to the marker. */
+    el.id = `marker-${marker.properties.id}`;
+    /* Assign the `marker` class to each marker for styling. */
+    el.className = 'marker';
+     
+    /**
+    * Create a marker using the div element
+    * defined above and add it to the map.
+    **/
+    new mapboxgl.Marker(el, { offset: [0, -23] })
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+     
+    /**
+    * Listen to the element and when it is clicked, do three things:
+    * 1. Fly to the point
+    * 2. Close all other popups and display popup for clicked store
+    * 3. Highlight listing in sidebar (and remove highlight for all other listings)
+    **/
+    el.addEventListener('click', (e) => {
+    /* Fly to the point */
+    flyToStore(marker);
+    /* Close all other popups and display popup for clicked store */
+    createPopUp(marker);
+    /* Highlight listing in sidebar */
+    const activeItem = document.getElementsByClassName('active');
+    e.stopPropagation();
+    if (activeItem[0]) {
+    activeItem[0].classList.remove('active');
+    }
+    const listing = document.getElementById(
+    `listing-${marker.properties.id}`
+    );
+    listing.classList.add('active');
+    });
+    }
+    }
+     
+    /**
+    * Add a listing for each store to the sidebar.
+    **/
+    function buildLocationList(stores) {
+    for (const store of stores.features) {
+    /* Add a new listing section to the sidebar. */
+    const listings = document.getElementById('listings');
+    const listing = listings.appendChild(document.createElement('div'));
+    /* Assign a unique `id` to the listing. */
+    listing.id = `listing-${store.properties.id}`;
+    /* Assign the `item` class to each listing for styling. */
+    listing.className = 'item';
+     
+    /* Add the link to the individual listing created above. */
+    const link = listing.appendChild(document.createElement('a'));
+    link.href = '#';
+    link.className = 'title';
+    link.id = `link-${store.properties.id}`;
+    link.innerHTML = `${store.properties.Institus}`;
+     
+    /* Add details to the individual listing. */
+    const details = listing.appendChild(document.createElement('div'));
+    details.innerHTML = `${store.properties.abrv}`;
+    if (store.properties.type) {
+    details.innerHTML += ` &middot; ${store.properties.type}<br><a href=${store.properties.site}><strong>web site</strong> </a>`;
+    }
+     
+    /**
+    * Listen to the element and when it is clicked, do four things:
+    * 1. Update the `currentFeature` to the store associated with the clicked link
+    * 2. Fly to the point
+    * 3. Close all other popups and display popup for clicked store
+    * 4. Highlight listing in sidebar (and remove highlight for all other listings)
+    **/
+    link.addEventListener('click', function () {
+    for (const feature of stores.features) {
+    if (this.id === `link-${feature.properties.id}`) {
+    flyToStore(feature);
+    createPopUp(feature);
+    }
+    }
+    const activeItem = document.getElementsByClassName('active');
+    if (activeItem[0]) {
+    activeItem[0].classList.remove('active');
+    }
+    this.parentNode.classList.add('active');
+    });
+    }
+    }
+     
+    /**
+    * Use Mapbox GL JS's `flyTo` to move the camera smoothly
+    * a given center point.
+    **/
+    function flyToStore(currentFeature) {
+    map.flyTo({
+    center: currentFeature.geometry.coordinates,
+    zoom: 19
+    });
+    }
+     
+    /**
+    * Create a Mapbox GL JS `Popup`.
+    **/
+    function createPopUp(currentFeature) {
+    const popUps = document.getElementsByClassName('mapboxgl-popup');
+    if (popUps[0]) popUps[0].remove();
+    const popup = new mapboxgl.Popup({ closeOnClick: false })
+    .setLngLat(currentFeature.geometry.coordinates)
+    .setHTML(
+    `<h3>Institut/ecole</h3><h4>${currentFeature.properties.abrv}<br><strong>${currentFeature.properties.disc}</strong></h4>`
+    )
+    .addTo(map);
+    }
+   </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+{
+    "univs": [
+        {
+            "id": 1,
+            "Nom": "Mohammed V",
+            "coordinates": [33.98960417675969, -6.858230516316849],
+            "n": 84104,
+            "img": "./img/img13.png",
+            "Ville": "Rabat",
+            "image": "./img/"
+        },
+        {
+            "id": 2,
+            "Nom": "Hassan II",
+            "coordinates": [33.594023547510496, -7.631972465762692],
+            "n": 136926,
+            "img": "./img/img2.png",
+            "Ville": "Casablanca"
+        },
+        {
+            "id": 3,
+            "Nom": "Sidi Mohammed Ben  Abdellah",
+            "coordinates": [34.033971518207096, -4.979865567560263],
+            "n": 98545, 
+            "img": "./img/img6.png",
+            "Ville": "Fès"
+        },
+        {
+            "id": 4,
+            "Nom": "Cadi Ayyad Marrakech",
+            "coordinates": [31.66451381066009, -7.998599890222562],
+            "n": 104792,
+            "img": "./img/img8.png",
+            "Ville": "Marrakech"
+        },
+        {
+            "id": 5,
+            "Nom": "Sultan Moulay Slimane Béni Mellal",
+            "coordinates": [32.33607662522239, -6.3695207104200415],
+            "n": 43197, 
+            "img": "./img/img5.png",
+            "Ville": "Beni Mellal"
+        },
+        {
+            "id": 6,
+            "Nom": "Mohammed Premier Oujda",
+            "coordinates": [34.6521014302971, -1.8977194169528688],
+            "n": 84587, 
+            "img": "./img/img4.png",
+            "Ville": "Oujda"
+        },
+        {
+            "id": 7,
+            "Nom": "Abdelmalek Essaâdi Tétouan",
+            "coordinates": [35.560787975035346, -5.364578723755583],
+            "n": 124992, 
+            "img": "./img/img3.png",
+            "Ville": "Tétouan"
+        },
+        {
+            "id": 8,
+            "Nom": "Chouaïb Doukkali El Jadida",
+            "coordinates": [33.22761617164294, -8.488047401977298],
+            "n": 26786, 
+            "img": "./img/img11.png",
+            "Ville": "El Jadida"
+        },
+        {
+            "id": 9,
+            "Nom": "Hassan 1er Settat",
+            "coordinates": [33.02911006230513, -7.615663636457712],
+            "n": 49165,
+            "img": "./img/img10.png",
+            "Ville": "Settat"
+        },
+        {
+            "id": 10,
+            "Nom": "Moulay Ismaïl Meknès",
+            "coordinates": [33.85753173474091, -5.57473262126095],
+            "n": 80431,
+            "img": "./img/img7.png",
+            "Ville": "Meknés"
+        },
+        {
+            "id": 11,
+            "Nom": "Ibn Tofaïl Kénitra",
+            "coordinates": [34.24621076777728, -6.584873095726885],
+            "n": 81116, 
+            "img": "./img/img9.png",
+            "Ville": "kénitra"
+        },
+        {
+            "id": 12,
+            "Nom": "Ibn Zohr Agadir",
+            "coordinates": [30.41057020558376, -9.543531220768958],
+            "n": 146615, 
+            "img": "./img/img12.png",
+            "Ville": "Agadir"
+        }
+        ]
+}

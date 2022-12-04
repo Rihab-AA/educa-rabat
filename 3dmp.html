@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add markers to a web map with a symbol layer</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<script>
+	// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmloYWJ1czEiLCJhIjoiY2xhMDd2NDRnMGdwaDNxbXNycmU2YjJ3biJ9.5nROirEOqU9ZDTetkpJ8rg';
+const map = new mapboxgl.Map({
+container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/mapbox/satellite-streets-v11',
+center: [-6.85175716777786,33.98054997733642],
+zoom: 20,
+bearing: 27,
+pitch: 45
+});
+map.on('load', () => {
+// Add an image to use as a custom marker
+map.loadImage(
+'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+(error, image) => {
+if (error) throw error;
+map.addImage('custom-marker', image);
+// Add a GeoJSON source with 2 points
+map.addSource('points', {
+'type': 'geojson',
+'data': {
+    "type": "FeatureCollection",
+    "features": [
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.85626124,34.01837342 ]
+     },
+     "properties": {
+     "Institus":"Ecole Royale du Service de Santé militaire",
+     "abrv":"ERSSM",
+     "disc":"L'Ecole Royale du Service de Santé Militaire (Lâ€™ERSSM Rabat) est un Ã©tablissement relevant du secteur militaire au Maroc, dont la vocation est de former des mÃ©decins, spÃ©cialistes et chirurgiens, ainsi que des infirmiers qui sont destinÃ©s Ã  travailler avec les forces armÃ©es royales.",
+     "filieres":"-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans,-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans\n-MÃ©decine dentaire avec un cursus de 5 ans\n-MÃ©decine vÃ©tÃ©rinaire avec un cursus de 6 ans\n-Pharmacie avec un cursus de 2 ans",
+     "site":"",
+     "type":"militaire",
+     "icon":"militaire.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.846855748,34.00590903 ]
+     },
+     "properties": {
+        "Institus":"Centre d'Instruction Service Social des Far Rabat ",
+     "abrv":"CISSF",
+     "disc":"",
+     "filieres":"sous officier d'administration 3Ans ",
+     "site":"",
+     "type":"militaire",
+     "icon":"militaire.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.880167603,33.96844725 ]
+     },
+     "properties": {
+        "Institus":"Centre d'Orientation et de Planification de l'Education Rabat",
+     "abrv":"COPE",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.858856824,33.98980186 ]
+     },
+     "properties": {
+        "Institus":"Centre pédagogique Régional Rabat",
+     "abrv":"CPR",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.825920637,33.98059576 ]
+     },
+     "properties": {
+        "Institus":"Ecole Normale Supérieure-Rabat",
+     "abrv":"ENS",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.877365109,33.96910089 ]
+     },
+     "properties": {
+        "Institus":"Ecole Normale Supérieure de l'Enseignement Technique Rabat",
+     "abrv":"ENSET",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.85744295,34.00757227 ]
+     },
+     "properties": {
+        "Institus":"Centre de Formation des Inspecteurs de l'Enseignement-Rabat",
+     "abrv":"CFIE",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.83996558,34.00711765 ]
+     },
+     "properties": {
+        "Institus":"Faculté des Lettres et des Sciences Humaines -Rabat",
+     "abrv":"FLSH",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.87032818,33.98092966 ]
+     },
+     "properties": {
+        "Institus":"Faculté de Médecine Dentaire - Rabat",
+     "abrv":"FMD",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.855981367,33.98340803 ]
+     },
+     "properties": {
+        "Institus":"Faculté de Médecine et de Pharmacie",
+     "abrv":"FMP",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.838228065,34.00816291 ]
+     },
+     "properties": {
+        "Institus":"Faculté des Sciences - Rabat",
+     "abrv":"FS",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.853568798,33.99768841 ]
+     },
+     "properties": {
+        "Institus":"Ecole Mohammadia d'Ingénieurs",
+     "abrv":"EMI",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.853568798,33.99768841 ]
+     },
+     "properties": {
+        "Institus":"Ecole Nationale de l'Industrie Minérale",
+     "abrv":"ENIM",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.867548251,33.98446298 ]
+     },
+     "properties": {
+        "Institus":"Ecole Nationale Supérieure d'Informatique et d'Analyse des Systémes",
+     "abrv":"ENSIAS",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.865307948,33.98231225 ]
+     },
+     "properties": {
+        "Institus":"Ecole des Sciences de l'Information",
+     "abrv":"ESI",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.861369513,33.98704399 ]
+     },
+     "properties": {
+        "Institus":"Ecole Nationale d'Architecture",
+     "abrv":"ENA",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.869955046,33.98667249 ]
+     },
+     "properties": {
+        "Institus":"Ecole de Gouvernance et d'Economie de Rabat",
+     "abrv":"EGE",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.880508537,33.95772332 ]
+     },
+     "properties": {
+     "Institus":"Ecole des Hautes Etudes Commerciales",
+     "abrv":"HEC",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.826619592,33.97839218 ]
+     },
+     "properties": {
+        "Institus":"Institut des Hautes Etudes de Management",
+     "abrv":"HEM",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.866760894,33.97667146 ]
+     },
+     "properties": {
+        "Institus":"Institut agronomique et vétérinaire Hassan II",
+     "abrv":"IAV",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.862729491,33.98570171 ]
+     },
+     "properties": {
+        "Institus":"Institut d'Etudes et de Recherches pour l'Arabisation",
+     "abrv":"IERA",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.86722641,33.98063262 ]
+     },
+     "properties": {
+        "Institus":"Institut National des Postes et Télécommunications",
+     "abrv":"INPT",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"public",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.845628834,34.0051031 ]
+     },
+     "properties": {
+        "Institus":"Institut supérieur d'ingénierie et des affaires",
+     "abrv":"isga",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.847861719,34.0026842 ]
+     },
+     "properties": {
+        "Institus":"Ecole Supérieure des Sciences et Technologies de l'Ingénierie",
+     "abrv":"ESSTI",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.837575533,33.97195265 ]
+     },
+     "properties": {
+        "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+     "abrv":"EMSI souissi",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.847515871,34.00894633 ]
+     },
+     "properties": {
+        "Institus":"ecole d'art et design",
+     "abrv":"EAD",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"universite.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.874645336,33.97308529 ]
+     },
+     "properties": {
+        "Institus":"Centre National pour la Recherche Scientifique et Technique)",
+     "abrv":"CNRST",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.860910979,33.98796576 ]
+     },
+     "properties": {
+        "Institus":"Institut National d'Aménagement et d'Urbanisme",
+     "abrv":"INAU",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.845113769,34.00510296 ]
+     },
+     "properties": {
+        "Institus":"L'Ecole Marocaine d'Ingénierie",
+     "abrv":"EMG",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.827688082,33.98594638 ]
+     },
+     "properties": {
+        "Institus":"L'Ecole Marocaine de Banque et de Commerce International",
+     "abrv":"EMBCI",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.851124356,34.00056388 ]
+     },
+     "properties": {
+        "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+     "abrv":"EMSI",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.844428126,34.00241236 ]
+     },
+     "properties": {
+        "Institus":"Ecole Marocaine des Sciences de l'Ingénieur",
+     "abrv":"emsi agdal",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.841230247,34.03940078 ]
+     },
+     "properties": {
+        "Institus":"Ecole Supérieure de Design Graphique et Digital & Architecture d'intérieur",
+     "abrv":"art'com",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+     }
+   },
+   {
+     "type": "Feature",
+     "geometry": {
+        "type": "Point",
+        "coordinates":  [ -6.839187338,34.01438958 ]
+     },
+     "properties": {
+        "Institus":"Ecole Nationale Supérieure de l'Administration",
+     "abrv":"ENSA",
+     "disc":"",
+     "filieres":"",
+     "site":"",
+     "type":"Privé",
+     "icon":"prive.png",
+     "iconsize":[50,50]
+    }
+}
+]
+}
+});
+// Add a symbol layer
+map.addLayer({
+'id': 'points',
+'type': 'symbol',
+'source': 'points',
+'size':[50,50],
+'layout': {
+'icon-image': 'custom-marker',
+// get the title name from the source's "title" property
+'text-font': [
+'Open Sans Semibold',
+'Arial Unicode MS Bold'
+],
+'text-offset': [0, 1.25],
+'text-anchor': 'top'
+},
+'paint': {
+    "text-color": " #581845"
+  }
+});
+}
+);
+});
+</script>
+<style>
+    #map {
+    position: fixed;
+    width: 50%;
+    }
+    #features {
+    width: 50%;
+    margin-left: 50%;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    background-color: #fafafa;
+    }
+    section {
+    padding: 25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+    }
+    section.active {
+    opacity: 1;
+    }
+    section:last-child {
+    border-bottom: none;
+    margin-bottom: 200px;
+    }
+    </style>
+    <div id="map"></div>
+    <div id="features">
+        <section id="ERSSM" class="active">
+        <h3>221b Baker St.</h3>
+        <p>
+        November 1895. London is shrouded in fog and Sherlock Holmes and
+        Watson pass time restlessly awaiting a new case. "The London
+        criminal is certainly a dull fellow," Sherlock bemoans. "There have
+        been numerous petty thefts," Watson offers in response. Just then a
+        telegram arrives from Sherlock's brother Mycroft with a mysterious
+        case.
+        </p>
+        </section>
+        <section id="CISSF">
+        <h3>Aldgate Station</h3>
+        <p>
+        Arthur Cadogan West was found dead, head crushed in on train tracks
+        at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich
+        Arsenal on the Bruce-Partington submarine, a secret military
+        project. Plans for the submarine had been stolen and seven of the
+        ten missing papers were found in West's possession. Mycroft implores
+        Sherlock to take the case and recover the three missing papers.
+        </p>  
+    </section>
+    <section id="ENS">
+        <h3>Woolwich Arsenal</h3>
+        <p>
+        While investigating at Woolwich Arsenal Sherlock learns that West
+        did not have the three keys&mdash;door, office, and
+        safe&mdash;necessary to steal the papers. The train station clerk
+        mentions seeing an agitated West boarding the 8:15 train to London
+        Bridge. Sherlock suspects West of following someone who had access
+        to the Woolwich chief's keyring with all three keys.
+        </p>
+        </section>
+</div>
+<script>
+    const chapters = {
+        'ERSSM': {
+        bearing: 27,
+        center: [ -6.85626124,34.01837342 ],
+        zoom: 20,
+        pitch: 20},
+        'CISSF': {
+            duration: 6000,
+            center: [ -6.846855748,34.00590903 ],
+            bearing: 150,
+            zoom: 15,
+            pitch: 0
+            },
+            'COPE': {
+            bearing: 90,
+            center: [ -6.880167603,33.96844725 ],
+            zoom: 13,
+            speed: 0.6,
+            pitch: 40
+            },
+            'CPR': {
+            bearing: 90,
+            center: [ -6.858856824,33.98980186 ],
+            zoom: 12.3
+            },
+            'ENS': {
+            bearing: 45,
+            center: [ -6.825920637,33.98059576 ],
+            zoom: 15.3,
+            pitch: 20,
+            speed: 0.5
+            },
+            'ENSET': {
+            bearing: 180,
+            center: [ -6.877365109,33.96910089 ],
+            zoom: 12.3
+            },
+            'CFIE': {
+            bearing: 90,
+            center: [ -6.85744295,34.00757227 ],
+            zoom: 17.3,
+            pitch: 40
+            },
+            'FLSH': {
+            bearing: 90,
+            center: [ -6.83996558,34.00711765 ],
+            zoom: 20,
+            pitch: 20
+            }};
+
+let activepointsName = 'ERSSM';
+function setActiveChapter(chapterName) {
+if (chapterName === activeChapterName) return;
+ 
+map.flyTo(chapters[chapterName]);
+ 
+document.getElementById(chapterName).classList.add('active');
+document.getElementById(activeChapterName).classList.remove('active');
+ 
+activeChapterName = chapterName;
+}
+ 
+function isElementOnScreen(id) {
+const element = document.getElementById(id);
+const bounds = element.getBoundingClientRect();
+return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+ 
+// On every scroll event, check which element is on screen
+window.onscroll = () => {
+for (const chapterName in chapters) {
+if (isElementOnScreen(chapterName)) {
+setActiveChapter(chapterName);
+break;
+}
+}
+};
+</script>
+</body>
+</html>

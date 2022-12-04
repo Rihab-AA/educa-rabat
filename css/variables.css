@@ -1,0 +1,71 @@
+:root
+    {
+        --rose2: #f2b5d4;
+        --rose1: #f7d6e0;
+        --white: #eff7f6;
+        --bleu1: #b2f7ef;
+        --bleu2: #90e3f4;
+
+        /* PAlette 2 : */
+        --c1: #e8e9eb;
+        --c2: #CCCDC6;
+        --c3: #ACADA8;
+        --c4: #746D69;
+        --c5: #262626;
+
+        /*  */
+        --mov: #8f42ec;
+        --black1: #20292f;
+        --gris1: #6d7c90; 
+        --gris2: #b3b3b3;
+        --bleu3: #3498db;
+        --bleu4: #6A5ACD;
+        --bleu5: #7CB9E8;
+        --vert1: #19c880;
+        --vert2: #28B5B5;
+
+        --peurpel1: #E6E6FA;
+        --peurpel2: #4B0082;
+        --peurpel3: #DDA0DD;
+        --peurpel4: #800080;
+
+    }
+
+
+
+*,
+*:before,
+*:after 
+    {
+        box-sizing: border-box; 
+    }
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+body, html
+    {
+        width: 100%;
+        height: 100%;
+    }
+body
+    {
+        font-family: 'Open Sans', sans-serif;
+        /* 
+        font-family: 'Lato', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Tajawal', sans-serif;
+        font-family: 'Great Vibes', cursive;
+        */
+    }
+
+
+a 
+{
+    text-decoration: none;
+    color: #000;
+}

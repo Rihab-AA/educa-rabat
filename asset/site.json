@@ -1,0 +1,566 @@
+[
+    {
+        "nom": "Universit\u00e9 Hassan II - Casablanca",
+        "etabs": [
+            {
+                "Nom": "ENSAM",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSEM",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG",
+                "position_link": null
+            },
+            {
+                "Nom": "FMPC",
+                "position_link": "https://goo.gl/maps/pX8CucwVjLpkSCHC7"
+            },
+            {
+                "Nom": "FMDC",
+                "position_link": "https://goo.gl/maps/ePwEHubKayf4UsdTA"
+            },
+            {
+                "Nom": "ENSET Mohammedia",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Ain Chock",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Ain Sebaa",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Mohammedia",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Ain Chock",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Ben M\u2019Sik",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Mohammedia",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Ain Chock",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Ben M\u2019Sik",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Mohammedia",
+                "position_link": null
+            },
+            {
+                "Nom": "ENS",
+                "position_link": null
+            },
+            {
+                "Nom": "ESTC",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universite\u0301 Abdelmalek Essaadi - T\u00e9touan",
+        "etabs": [
+            {
+                "Nom": "ENSA Tanger",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA T\u00e9touan",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG Tanger",
+                "position_link": null
+            },
+            {
+                "Nom": "FMP Tanger",
+                "position_link": "https://goo.gl/maps/RyTiohVu2yLEy6ZU7"
+            },
+            {
+                "Nom": "ESRFT",
+                "position_link": "https://goo.gl/maps/7hML7Vcs4RCHgFUj6"
+            },
+            {
+                "Nom": "ENSA Hoceima",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Tanger",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES T\u00e9touan",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH T\u00e9touan",
+                "position_link": null
+            },
+            {
+                "Nom": "FS T\u00e9touan",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Tanger",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Hoceima",
+                "position_link": null
+            },
+            {
+                "Nom": "ENS T\u00e9ouan",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Larache",
+                "position_link": null
+            },
+            {
+                "Nom": "Facult\u00e9 Ossol Ad-dine",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Mohammed Premier - Oujda",
+        "etabs": [
+            {
+                "Nom": "FMP Oujda",
+                "position_link": "https://goo.gl/maps/fQTN177pzTK6GAb1A"
+            },
+            {
+                "Nom": "ENSA Oujda",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG Oujda",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Oujda",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Oujda",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Oujda",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Oujda",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Sultan Moulay Slimane - Beni Mellal",
+        "etabs": [
+            {
+                "Nom": "FP Beni Mellal",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Beni Mellal",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Beni Mellal",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Beni Mellal",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universite\u0301 Sidi Mohammed Ben Abdellah - F\u00e8s",
+        "etabs": [
+            {
+                "Nom": "ENSA F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FMP F\u00e8s",
+                "position_link": "https://goo.gl/maps/96ijxL6GyjBzAhSn7"
+            },
+            {
+                "Nom": "ENS F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "EST F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FST F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Sa\u00efss",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Dhar El Mahraz",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Dhar El Mahraz",
+                "position_link": null
+            },
+            {
+                "Nom": "Facult\u00e9 Chariaa F\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Taza",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Moulay Isma\u00efl - Mekn\u00e8s",
+        "etabs": [
+            {
+                "Nom": "ENSAM Mekn\u00e8s",
+                "position_link": "https://goo.gl/maps/LBhY5QTj9XY98MMu7"
+            },
+            {
+                "Nom": "ENS Mekn\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Mekn\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Mekn\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Mekn\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Mekn\u00e8s",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Kh\u00e9nifra",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Errachidia",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Errachidia",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Ibn Tofail - K\u00e9nitra",
+        "etabs": [
+            {
+                "Nom": "ENSA K\u00e9nitra",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG K\u00e9nitra",
+                "position_link": null
+            },
+            {
+                "Nom": "EST K\u00e9nitra",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES K\u00e9nitra",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH K\u00e9nitra",
+                "position_link": null
+            },
+            {
+                "Nom": "FS K\u00e9nitra",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Cadi Ayyad - Marrakech",
+        "etabs": [
+            {
+                "Nom": "ENSA Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "ENCG Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA Safi",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Safi",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Essaouira",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "FMP Marrakech",
+                "position_link": "https://goo.gl/maps/3UN8YStnngXzkUez8"
+            },
+            {
+                "Nom": "FS Semlalia",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Safi",
+                "position_link": null
+            },
+            {
+                "Nom": "ENS Marrakech",
+                "position_link": null
+            },
+            {
+                "Nom": "FLA Marrakech",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Choua\u00efb Doukkali - El Jadida",
+        "etabs": [
+            {
+                "Nom": "ENCG El Jadida",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA El Jadida",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Sidi Bennour",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES El Jadida",
+                "position_link": null
+            },
+            {
+                "Nom": "FS El Jadida",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH El Jadida",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Hassan I - Settat",
+        "etabs": [
+            {
+                "Nom": "ENCG Settat",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA Khouribga",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA Berrechid",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Berrechid",
+                "position_link": null
+            },
+            {
+                "Nom": "FST Settat",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Khouribga",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Settat",
+                "position_link": null
+            },
+            {
+                "Nom": "ISSS",
+                "position_link": "https://goo.gl/maps/LjPsTeu85mTiwoZEA"
+            },
+            {
+                "Nom": "ISS Settat",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Mohammed V - Rabat",
+        "etabs": [
+            {
+                "Nom": "EMI",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSIAS",
+                "position_link": "https://goo.gl/maps/JKed7DaBjiw6L21X9"
+            },
+            {
+                "Nom": "ENSET Rabat",
+                "position_link": null
+            },
+            {
+                "Nom": "FMPR",
+                "position_link": "https://goo.gl/maps/7yk2CMT3uH3uyuuY9"
+            },
+            {
+                "Nom": "FMDR",
+                "position_link": "https://goo.gl/maps/2QpJSevU1b26nXB2A"
+            },
+            {
+                "Nom": "EST Sal\u00e9",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Agdal",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Souissi",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Sal\u00e9",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Rabat",
+                "position_link": null
+            },
+            {
+                "Nom": "FSE Rabat",
+                "position_link": null
+            },
+            {
+                "Nom": "ENS Rabat",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Rabat",
+                "position_link": null
+            }
+        ]
+    },
+    {
+        "nom": "Universit\u00e9 Ibn Zohr - Agadir",
+        "etabs": [
+            {
+                "Nom": "ENCG Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "ENSA Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "FMP Agadir",
+                "position_link": "https://goo.gl/maps/q5AWVJ2i9zduxmMs6"
+            },
+            {
+                "Nom": "ENCG Dakhla",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "FSJES Ait Melloul",
+                "position_link": null
+            },
+            {
+                "Nom": "FS Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "Facult\u00e9 Chari\u00e2a Smara",
+                "position_link": null
+            },
+            {
+                "Nom": "Facult\u00e9 Chari\u00e2a Ait Melloul",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "EST Guelmim",
+                "position_link": null
+            },
+            {
+                "Nom": "EST La\u00e2youne",
+                "position_link": null
+            },
+            {
+                "Nom": "FLSH Agadir",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Ouarzazate",
+                "position_link": null
+            },
+            {
+                "Nom": "FP Taroudant",
+                "position_link": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,1015 @@
+[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fly to a Universirty location</title>
+<link rel="shortcut icon" href="images\mortier.ico" />
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+#map {
+position: fixed;
+width: 50%;
+}
+#features {
+width: 50%;
+margin-left: 50%;
+font-family: sans-serif;
+overflow-y: scroll;
+background-color: #fafafa;
+}
+section {
+padding: 25px 50px;
+line-height: 25px;
+border-bottom: 1px solid #ddd;
+opacity: 0.25;
+font-size: 13px;
+}
+section.active {
+opacity: 1;
+}
+section:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
+.mapboxgl-popup-content
+    {
+        padding: 0 !important;
+    }
+.nom_chap
+    {
+    background-color: #19c880;
+    }
+</style>
+<div id="map"></div>
+
+<div id="features">
+<section id="ERSSM" class="active">
+<h3>L’Ecole Royale du Service de Santé Militaire</h3>
+<img src="ERSSM.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole Royale du Service de Santé Militaire (L’ERSSM Rabat)
+est un établissement relevant du secteur militaire au Maroc, 
+dont la vocation est de former des médecins, spécialistes et chirurgiens, 
+ainsi que des infirmiers qui sont destinés à travailler avec les forces armées royales.<br>
+<strong>Filieres:<br>
+-Médecine générale avec un cursus de 7 ans,<br>
+-Médecine dentaire avec un cursus de 5 ans<br>
+-Médecine vétérinaire avec un cursus de 6 ans<br>
+-Pharmacie avec un cursus de 2 ans.
+</strong>
+</p>
+</section>
+<section id="CISSF">
+<h3>Centre d’Instruction Service Social des Far Rabat</h3>
+<img src="CISSF.jfif"
+width="400"
+height="200">
+<p>
+    IL offre aux bacheliers une formation de 3 ans de Sous-Officiers Techniques.<br>
+    Le cursus de formation des élèves sous-officiers a été harmonisé au sein de toutes les composantes des Forces Armées Royales FAR. Ce cursus dure 3 ans et comprend :<br>
+    
+    <strong><u>1ère année :</u> une formation commune de base pour l’obtention du Certificat d’Aptitude Technique N°1 ou équivalent</strong><br>
+    <strong><u>2ème année : </u>l’obtention du Certificat d’Aptitude Technique N°2 ou équivalent et préparation du Certificat Interarmes ou équivalent, suivi d’un stage pratique au niveau des Unités de l’Armée; l’Arme et Service. </strong><br>
+    <strong><u>3ème année :</u> l’obtention du Brevet Élémentaire et  du Certificat Interarmes suivi d’un stage d’application en zone opérationnelle. Les trois années de formation sont sanctionnées par la nomination au grade Sergent ou équivalent et classement en échelle de solde N°3.</strong><br>
+</p>
+</section>
+<section id="COPE">
+<h3>Centre d’Orientation et de Planification de l’Education Rabat</h3>
+<img src="cope.jfif"
+width="400"
+height="200">
+<p>
+Le COPE - Centre d’Orientation et de Planification de L’Education au Maroc est un centre sous tutelle du Ministère de l’Education Nationale, de l’Enseignement Supérieur, de la Formation des Cadres et de la Recherche Scientifique.
+Le COPE dispose de deux cycles de formation: Un cycle de formation des conseillers et Un cycle de formation des inspecteurs.<br>
+<strong><u>Filières:</u></strong><br>
+-Orientation de l’Education<br>
+-Planification de l’Education<br>
+<strong><u>Diplômes</u></strong><br>
+Conseiller en Orientation de l’Education<br>
+Conseiller en Planification de l’Education<br>
+Inspecteur en Orientation de l’Education<br>
+Inspecteur en Planification de l’Education<br>
+<strong><u>Durée d'études</u></strong><br>
+2 ans
+</p>
+</section>
+<section id="CPR">
+<h3>Centre pédagogique Régional Rabat</h3>
+<img src="cpr.jfif"
+width="400"
+height="200">
+<p>
+Le Centre Pédagogique Régional Rabat – CPR Rabat est un établissement de formation pédagogique public sous tutelle du ministère de l’enseignement supérieur, de la recherche scientifique et de la formation des cadres.
+Le CPR Rabat est chargé de former les futurs enseignantes et enseignants du collège dans diverses disciplines et c’est le seul lieu d’enseignement du Maroc qui assure la formation des futurs professeurs d’éducation musicale des collèges.<br>
+<strong><u>Filières:</u></strong><br>
+Anglais<br>
+Lettres Françaises<br>
+Allemand.<br>
+Sciences Naturelles.<br>
+Physique-Chimie.<br>
+Informatique.<br>
+Arts plastiques.<br>
+Education musicale.<br>
+<strong><u>Diplômes</u></strong><br>
+Conseiller en Orientation de l’Education<br>
+Conseiller en Planification de l’Education<br>
+Inspecteur en Orientation de l’Education<br>
+Inspecteur en Planification de l’Education<br>
+<strong><u>Durée d'études</u></strong><br>
+2 ans
+</p>
+</section>
+<section id="ENS">
+<h3>Ecole Normale Supérieure Rabat -ENS</h3>
+<img src="ENS.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole Normale Supérieure Rabat (ENS Rabat) fut créée en 1978, à côté d’autres établissements ENS, dans le cadre d’un programme national destiné à la formation des enseignants du Secondaire de second cycle afin de répondre à une demande accrue dans le secteur de l’enseignement public.
+Les ENS préparent les diplômes suivants :<br>
+<strong>
+- Diplôme du premier cycle des ENS<br>
+
+- Diplôme du deuxième cycle des ENS<br>
+
+- Diplôme du troisième cycle des ENS<br>
+
+- Certificat d’Aptitude à l’Enseignement dans les Centres de Formation des Cadres de l’enseignement.<br>
+
+- Certificat d’Aptitude à l’Enseignement Secondaire.<br>
+
+- Agrégation<br>
+</strong>
+
+</p>
+</section>
+<section id="ENSET">
+<h3>Ecole Normale Supérieure de l’Enseignement Technique Rabat</h3>
+<img src="ENSET.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole Normale Supérieure de L’Enseignement Technique de Rabat  (ENSET)  a été créé en 1980 par le Ministère de l’Education Nationale (MEN) dans l’objectif de pourvoir à ses besoins en cadres enseignants dans les domaines industriel (le génie mécanique et le génie électrique) et  tertiaire.
+En trente ans, l’école s’est forgée une expérience incontestable dans le domaine de la formation à caractère industriel, aussi bien dans le domaine de la formation de cadres enseignants, que celui des cadres techniques destinés à l’industrie. Le nombre de lauréats de l’ENSET Rabat a atteint 3100 cadres.<br>
+<strong><u>FORMATION:</u></strong><br>
+<strong>1. Un cycle de DUT préparant à la vie active et éventuellement à la poursuite des études en licence ou en première année du cycle d’ingénieur<br></strong>
+    Logiciel et Réseaux<br>
+    Thermique et Energie<BR>
+    Industriel et Maintenance<br>
+    Conception Mécanique et Productique<br>
+    Electrique et Informatique Industrielle<br>
+    Management des Entreprises<br>
+<strong>2. Un cycle de licence professionnelle préparant à la vie active et éventuellement à l’accès en Master ou en première du cycle d’ingénieur,</strong><br>
+    <strong>3. Un cycle d’ingénieur comportant trois filières avec un tronc commun en première et deuxième année et plusieurs options en troisième année.</strong><br>
+    <strong>4. Un cycle de master offrant deux filières de génie mécanique et génie électrique qui alimenteront notamment l’école doctorale.</strong><br>
+    Master en Génie Mécanique<br>
+    Master en Génie Electrique<br>
+<strong>5. L’école doctorale pour préparer le diplôme de doctorat National, puisqu’elle fait partie du CEDoc de l’UMS (ST2I).</strong>   
+</p>
+</section>
+<section id="CFIE">
+<h3>Centre de Formation des Inspecteurs de l’Enseignement Rabat </h3>
+<img src="CFIE.jfif"
+width="400"
+height="200">
+<p>
+    Le Centre de Formation des Inspecteurs de l’Enseignement de Rabat CFIE est crée en 1969 par le Ministère de l’Education Nationale, de l’Enseignement Supérieur, de la Formation des Cadres et de la Recherche Scientifique<br>
+<strong><u>Filières:</u></strong><br>
+Enseignement primaire<br>
+Enseignement secondaire<br>
+
+<strong><u>Diplômes</u></strong><br>
+Certificat d’Inspecteur de l’Enseignement Primaire<br>
+Certificat d’Inspecteur de l’Enseignement Secondaire<br>
+<strong><u>Durée d'études</u></strong><br>
+2 ans-3ans
+
+</p>
+</section>
+<section id="FLSH">
+<h3>Faculté des Lettres et des Sciences Humaines – Rabat </h3>
+<img src="FLSH.jfif"
+width="400"
+height="200">
+<p>
+    La FLSH Rabat offre un enseignement en 13 filières pour la préparation du DEUG et de la Licence fondamentale et 2 filières pour une licence professionnelle. Ces filières sont gérées par 13 départements, 6 en langues et littératures (Arabe, Français, Anglais, Espagnol, Italien, Allemand) et 7 en Sciences Humaines (Philosophie, Sociologie, Psychologie, Etudes Islamiques, Géographie, Histoire et Sciences et Techniques de la Communication) La Faculté dispose de 15 filières de Master partagées entre les départements de langue et littérature d’une part, et les départements des Sciences Humaines, de l’autre.<br>
+    <strong><u>Filières</u></strong>
+Etudes islamiques<br>
+Langue et littérature arabes<br>
+Langue et littérature françaises<br>
+Langue et littérature allemandes<br>
+Langue et littérature italiennes<br>
+Histoire géographie<br>
+Philosophie<br>
+Psychologie<br>
+Langue et littérature anglaises<br>
+Sociologie<br>
+Langue et littérature espagnoles<br>
+Etudes portugaises<br>
+Agent de developpement social<br>
+sciences et techniques de communication<br>
+Education spécialisée.<br>
+<strong><u>Diplômes</u></strong><br>
+Licence d’Etudes Fondamentales<br>
+Licence Professionnelle<br>
+Master<br>
+Doctorat.
+</p>
+</section>
+<section id="FMD">
+<h3>Faculté de Médecine Dentaire – Rabat</h3>
+<img src="FMD.jfif"
+width="400"
+height="200">
+<p>
+    La Faculté de Médecine Dentaire Rabat ou FMD Rabat a pour mission la formation de médecins dentistes qualifiés, capables de répondre aux besoins nationaux en traitements curatifs et en prévention dentaire.
+FMD Rabat assure  la formation de médecins dentistes spécialistes, ainsi que la formation d’enseignants chercheurs ou de formateurs.<br>
+<strong><u>filières</u></strong><Br>
+ Médecine dentaire<br>
+Odontologie<br>
+Assistance dentaire<br>
+<strong><u>Diplômes:</u></strong><br>
+Doctorat en médecine dentaire<br>
+Diplôme national d’odontologie<br>
+DUT<br>
+<strong><u>Durée d'Etudes</u></strong><br>
+2 à 5 ans d’études.
+<strong><u>Formations:</u></strong><br>
+<br>Doctorat en Médecine dentaire - FMD Rabat
+<br>Doctorat-spécialité Odontologie Chirurgicale en Medecine Dentaire - FMD Rabat
+<br>Doctorat-spécialité Odontologie Conservatrice en Medecine Dentaire - FMD Rabat
+<br>Doctorat-spécialité Orthopédie Dento-Faciale en Medecine Dentaire - FMD Rabat
+<br>Professeur agrégé en Medecine Dentaire - FMD Rabat
+<br>Professeur assistant de lenseignement supérieur en Medecine Dentaire - FMD Rabat.
+
+</p>
+</section>
+
+<section id="FMP">
+<h3>Faculté de Médecine et de Pharmacie – Rabat</h3>
+<img src="FMP.jpg"
+width="400"
+height="200">
+<p>
+    La FMP Rabat est une faculté de médecine et de pharmacie située à la ville de Rabat, elle assure la formation des médecins et médecins spécialistes.
+ La Faculté de Médecine et de Pharmacie de Rabat a été inauguré en 1962 elle est considérée parmi les plus anciens établissements de formation universitaire au Maroc.
+ La durée des études à FMP Rabat est la même que dans d’autres facultés de médecine et de pharmacie.
+ <strong><u>filières:</u></strong><br>
+ Médecine générale,
+Pharmacie
+<strong><u>Formations:</u></strong><br>
+<br>Doctorat en Médecine - FMP Rabat
+<br> en Pharmacie - FMP Rabat
+<br>Master Spécialisé en Assurance qualité des médicaments - FMP Rabat
+<br>Master Spécialisé en Biotechnologie dans le domaine de la santé - FMP Rabat
+<br>Doctorat en Analyse théorique, descriptive et appliquée aux langues en usage au Maroc - FMP Rabat
+<br>Doctorat en Chirurgie Générale - FMP Rabat
+<br>Doctorat en Chirurgie Pédiatrique - FMP Rabat
+<br>Doctorat en Chirurgie maxillo-faciale et chirurgie plastique et réparatrice - FMP Rabat
+<br>Doctorat en Chirurgie Thoracique - FMP Rabat
+<br>Doctorat en Neurochirurgie - FMP Rabat
+<br>Doctorat en Traumatologie Orthopédie - FMP Rabat
+<br>Doctorat en Urologie - FMP Rabat
+<br>Doctorat en Gynécologie Obst. - FMP Rabat
+<br>Doctorat en ORL - FMP Rabat
+<br>Doctorat en Oncologie - FMP Rabat
+<br>Doctorat en Médecine des urgences et des catastrophes - FMP Rabat
+<br>Doctorat en Anatomie - FMP Rabat
+<br>Doctorat en Anatomie pathologique - FMP Rabat
+<br>Doctorat en Biochimie, Chimie, Biologie et Biologie Moléculaire - FMP Rabat
+<br>Doctorat en Biophysique et Médecine Nucléaire - FMP Rabat
+<br>Doctorat en Génétique et immunologie - FMP Rabat
+<br>Doctorat en Hématologie - FMP Rabat
+<br>Doctorat en Histologie embryologie et cytogénétique - FMP Rabat
+</p>
+</section>
+<section id="FS">
+<h3>Faculté des Sciences – Rabat</h3>
+<img src="FS.jpg"
+width="400"
+heightand="200">
+<p>
+Créée au sein de l’Université Mohammed V, la Faculté des Sciences de Rabat (FS Rabat) est un établissement d’enseignement supérieur et de recherche qui a longtemps assuré, dans les spécialités de Mathématiques, Informatique, Physique, Chimie, Biologie et Géologie, les formations de Licence, Certificat d’Etudes Approfondies (CEA), Diplôme d’Etudes Supérieures de 3ème cycle (DES) et Doctorat d’état ès Sciences. L’effort déployé dans le domaine de la formation et de la recherche a permis de marocaniser rapidement le corps enseignant de cet établissement et de pourvoir en enseignants-chercheurs toutes les institutions scientifiques créées au Maroc, au cours des vingt dernières années.<br>
+<strong><u>filieres:</u></strong><br>
+<br>Sciences de la vie et de l’univers
+<br>Math et informatique
+<br>Sciences de la matière physique
+<br>Math et applications
+<br>Sciences de la vie
+<br>Sciences de la matière/chimie
+<br>Sciences de la terre et de l’univers
+<br>Administration parc PC
+<br>Offschoring
+<br>Dosimétrie médicale
+<br>Génie analytique( chimie)
+<br>Mécatronique
+<br>Réseaux et télécommunications
+<br>Qualité logiciel
+<br>Informatique qualité du logiciel
+</p>
+</section>
+<section id="EMI">
+<h3>Ecole Mohammadia d'Ingénieurs</h3>
+<img src="EMI.jfif"
+width="400"
+height="200">
+<p>
+    L’école d’ingénieurs EMI Rabat a été inaugurée en 1959, considérée parmi les écoles d’ingénieurs les plus anciennes au Maroc, avec une formation d’ingénieurs d’application seulement, l’EMI Rabat à cette époque se limitait à 4 spécialités seulement :  Génie Civil, Génie Electrique, Génie Mécanique et Génie Minéral. Des filières qui se sont développées après.
+
+    Avec le développement économique et l’accroissement du besoin en cadres ingénieurs, l’école est passée du système de 4 ans , à celui de 5 ans d’études.
+    
+    Actuellement l’EMI Rabat délivre des diplômes d’ingénieur dans les spécialités suivantes :<BR>
+  <STRONG> 
+<BR>Génie Civil
+<BR>Génie Electrique
+    <BR>Génie Industriel
+    <BR>Génie Informatique
+    <BR>Génie Mécanique
+    <BR>Génie Minéral
+    <BR>Génie MIS (Modélisation et Informatique Scientifique)
+    <BR>Génie des Procédés
+    </STRONG><BR>
+    EMI Rabat figure parmi les écoles d’ingénieurs au Maroc qui attirent beaucoup d’élèves chaque année
+
+</p>
+</section>
+<section id="ENIM">
+<h3>Ecole Nationale de l'Industrie Minérale</h3>
+<img src="ENIM.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole Nationale Supérieure des Mines de Rabat (ENSMR ou Mines Rabat) est l’une des plus anciennes et grandes écoles d’ingénieurs au Maroc. Mines Rabat a vu le jour en 1972 et elle est placée sous la tutelle de l’autorité gouvernementale chargée de l’Énergie et des Mines.
+Mines Rabat assure la formation d’ingénieurs polyvalents et de haut niveau capables de concevoir, d’implanter, de gérer, de diriger des systèmes industriels d’envergure et destinés à servir les domaines de l’électromécanique, génie des matériaux, génie des procédés industriels, mines, management industriel, environnement, génie informatique, etc.<br>
+<strong>Filières:</strong><br>
+<u>Département Sciences de la Terre:</u><br>
+Hydrogéotechnique <br>
+Management Industriel <br>
+Environnement et Sécurité Industriels<br>
+<u>Département Mines :</u><br>
+Aménagement, Exploitation et Protection du Sol et Sous Sol<br>
+<u>Département Génie des Procédés Industriels :</u>><br>
+Ingénierie des Procédés : Option Energies Renouvelables <br>
+Systèmes Énergétiques : Option Energies Renouvelables<br>
+<u>Département Génie des Matériaux :</u><br>
+Matériaux et Contrôle Qualité.<br>
+<u>Département Electromécanique :</u><br>
+Electromécanique <br>
+Maintenance Industrielle <br>
+Energies Renouvelables<br>
+<u>Département Informatique:</u><br>
+Management des Systèmes d’Information et de Production.<br>
+<strong>Diplômes:</strong><br>
+Diplôme d’ingénieurs d’Etat.<br>
+<strong>Durée d'études:</strong><br>
+Trois ans.
+</p>
+</section>
+<section id="ENSIAS">
+<h3>Ecole Nationale Supérieure d'Informatique et d'Analyse des Systèmes</h3>
+<img src="ENSIAS.jfif"
+width="400"
+height="200">
+<p>
+L’ENSIAS Rabat est l’abréviation de l’Ecole Nationale Supérieure d’Informatique et d’Analyse des Systèmes qui offre une formation de pointe sur le domaine d’informatique avec son système d’analyse.<br>
+L’École nationale supérieure d’informatique et d’analyse des systèmes (ENSIAS Rabat) est l’une des grandes écoles d’ingénieurs marocaines rattachée à l’université Mohammed V – Souissi de Rabat.<br>
+<strong>Formations de l’ENSIAS Rabat:</strong><br>
+La formation d’ingénieur à l’ENSIAS Rabat est organisée en deux premières années d’études communes à l’ensemble de la promotion (Tronc Commun). La troisième année de spécialisation est dispensée en six options :<br>
+- Génie Logiciel<br>
+- Business Intelligence<br>
+- E-logistique<br>
+- Ingénierie des Télécommunication et Réseaux<br>
+- Systèmes Embarqués et Mobiles<br>
+- Sécurité des Systèmes d’Information<br>
+L’établissement ENSIAS fait partie du large réseau des écoles d’ingénieurs au Maroc.
+</p>
+</section>
+<section id="ESI">
+<h3>Ecole des Sciences de l'Information</h3>
+<img src="ESI.jfif"
+width="400"
+height="200">
+<p>
+L’ESI Rabat est une école d’enseignement supérieur publique créée en octobre 1974, et qui fait partie des établissements à caractère scientifique et technique (dont entre autres les écoles d’Ingénieurs).<bR>
+L’admission à l’ESI Rabat est conditionnelle à la réussite du CNC (Concours National Commun) post-classes prépas<br>
+<strong>Diplômes</strong><br>
+Ingénieur d’Etat<br>
+Masters<br>
+Masters Spécialisés<br>
+Doctorat<br>
+Durée d'études<br>
+Diplôme d’Ingénieur (classes préparatoires + 3 ans) : Six semestres<br>
+Diplôme de Master : Quatre semestres<br>
+Diplôme de Master Spécialisé : Quatre semestres<br>
+Diplôme de Doctorat : Trois ans<br>
+</p>
+</section>
+<section id="ENA">
+<h3>Ecole Nationale d'Architecture</h3>
+<img src="ENA.jfif"
+width="400"
+height="200">
+<p>
+L’objectif derrière la création de l’ENA de Rabat est de doter le Maroc d’ingénieurs architectes qui peuvent conduire des projets de l’Etat ainsi que des particuliers, en matière des constructions et du BTP.<br>
+Trois autres écoles ont été créés pour en constituer désormais un réseau d’écoles d’architecture marocaines, il s’agit des ENA  Fès, Tétouan et Marrakech.<BR>
+<strong>Formation initiale :</strong><br>
+Durée des études : 6 ans<br>
+Conditions d’accès : bacheliers scientifiques ou titulaires d’un diplôme équivalent, âgés de moins de 22 ans, ayant au moins la mention assez bien+concours écrit et oral après sélection sur dossier.<br>
+<strong>Masters spécialisés :</strong><br>
+Durée d’études : 4 semestres<br>
+Conditions d’accès : l’accès est ouverts aux candidats titulaires du baccalauréat+3 ou 4 conditionné par l’étude et l’approbation du dossier du candidat et entretien de motivation.
+</p>
+</section>
+<section id="EGE">
+<h3>Ecole de Gouvernance et d'Economie de Rabat</h3>
+<img src="EGE.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole de Gouvernance et d’Economie de Rabat est la 1ère école de sciences politiques au Maroc. Depuis 2014, elle est affiliée à l’Université Mohammed VI Polytechnique, un projet à la dimension et l’ambition internationales. L’EGE  a été créée en mai 2008 par une Fondation à but non lucratif a pour objectif d’introduire dans l’enseignement supérieur au Maroc une école de sciences politiques et d’économie qui puissent former des cadres sensibles à la complexité des mondes sociaux et politiques et aux sciences économiques dans des conditions semblables à celles des grandes institutions internationales.<BR>
+    <strong>Diplômes</strong><br>
+- Diplôme du Premier Cycle (3 ans) avec une spécialisation en science politique, sciences sociales ou économie<br>
+- Master “Etudes Politiques et Internationales” en partenariat avec Sciences Po Aix<br>
+- Master “Economie internationale” avec le partenariat de l’Université  de Grenoble et de Sciences Po Aix<br>
+- Master “Analyse comparée des Sociétés Méditerranéennes” avec l’Université de Turin<br>
+</p>
+</section>
+<section id="HEC">
+<h3>Ecole des Hautes Etudes Commerciales</h3>
+<img src="HEC.jfif"
+width="400"
+height="200">
+<p>
+Le groupe HEC – Hautes Etudes Commerciales est un établissement d’enseignement supérieur autorisé par le Ministère de l’Enseignement Supérieur. HEC offre des formations en conformant au système LMD (Licence- Master – Doctorat)<BR>
+La filière Administration des Entreprises (Bac +3) qui correspond au premier cycle est  dispensée par HEC Maroc. Quant au 2ème cycle (Bac+5), il propose les formations suivantes :<br>
+Administration et stratégies des entreprises, option : entrepreneuriat<br>
+Marketing et management de la distribution<br>
+Comptabilité, contrôle et audit<br>
+La filières offertes par le groupe HEC est accréditée par l’Etat pour les centres : Rabat, Fès.<br>
+</p>
+</section>
+<section id="HEM">
+<h3>Institut des Hautes Etudes de Management</h3>
+<img src="HEM.jfif"
+width="400"
+height="200">
+<p>
+HEM est une école supérieure marocaine qui profite de 32 ans d’expertise et qui existe au Maroc à travers 5 campus.
+Classée école supérieure privée N°1 au Maroc, HEM offre deux programmes d’excellence, alliant développement des compétences techniques et renforcement des dimensions humaines et culturelles de l’étudiant :<br>
+Programme Grande Ecole Bac+5 en Management – Gestion<br>
+Programme Bac+5 en Ingénierie Informatique <br>
+</p>
+</section>
+<section id="IAV">
+<h3>Institut agronomique et vétérinaire Hassan II</h3>
+<img src="IAV.jfif"
+width="400"
+height="200">
+<p>
+L’IAV Rabat (Institut Agronomique et Vétérinaire Hassan II) a été créé en 1963 en réponse à un besoin urgent qui était la formation des cadres compétents dans le domaine de l’agriculture (Ingénieurs, Docteurs Vétérinaires et Docteurs ès sciences Agronomiques).<br>
+    IAV Rabat est spécialisée dans la formation en agriculture et filières relatives à ce secteur. C’est pour cela que IAV Rabat fait partie des principales écoles d’ingénieurs au Maroc.<br>
+    pour plus d'information veuillez visiter ce geoportail de l'IAV <br>
+    <strong><u><a href="https://ametop.github.io/iav-campus-geoportal/">geoportail-IAV</a></u></strong>
+</p>
+</section>
+<section id="IERA">
+<h3>Institut d'Etudes et de Recherches pour l'Arabisation</h3>
+<img src="IERA.jfif"
+width="400"
+height="200">
+<p>
+    L’Institut d’Études et de Recherches pour l’Arabisation (IERA), établissement de recherche relevant de l’Université Mohamed V - Souissi, a été créé en 1960 (décret N°2-59-1965 du 14 janvier 1960), avec pour vocation de doter la langue arabe d’outils linguistiques, pédagogiques et technologiques adéquats pour en faire une langue moderne de travail, d’enseignement, de science et de techniques.<br>
+    Cet institut a pour objectif :<br>
+    - Situer la langue arabe dans son environnement national naturel en tant que langue officielle, et dans son environnement international, en tant que l’une des six langues internationales des Nations Unies <br>
+    - Doter la langue arabe d’outils conceptuels, terminologiques, pédagogiques, et computationnels permettant d’en faire une langue de communication, de travail et de savoir<br>
+</p>
+</section>
+<section id="INPT">
+<h3>Institut National des Postes et Télécommunications</h3>
+<img src="INPT.jfif"
+width="400"
+height="200">
+<p>
+L’institut National des Postes et Télécommunications (INPT) est un établissement d’enseignement supérieur, rattaché à l’Agence Nationale de Réglementation des Télécommunications (ANRT) de par la loi 24-96  relative à la poste et aux télécommunications promulguée par le dahir n°1-97-162 du 2 rabii II 1418 (7 août 1997), telle qu’elle a été modifiée et complétée, notamment son article 107. L’INPT est également régi par le décret n° 2-11-82 du 7 Ramadan 1432 (8 Août 2011) portant réorganisation de l’Institut National des Postes et Télécommunications.<br>
+L’INPT a pour mission la formation, la recherche et l’expertise. Il est chargé de la formation initiale et de la formation continue dans les domaines des télécommunications, des technologies de l’information et de la communication et disciplines connexes.<br>
+    <strong><u>filières:</u></strong><br>
+--1ère année--<br>
+Ingénieur des Sciences de Données<br>
+Ingénierie des Systèmes Ubiquitaires et Distribués – Cloud et IoT (SUD)<br>
+Ingénieur Cyber Sécurité Et Confiance Numérique<br>
+Advanced Software Engineering for Digital Services (A.S.E.D.S)<br>
+Ingénierie Smart ICT« Smart Information and Communication Technology »<br>
+Systèmes Embraqués et Services Numériques<br>
+Ingénieur Innovation et AMOA<br>
+-Conditions d’accès :<br>
+Filières ouvertes au choix aux : Candidats ayant réussi le concours commun des écoles d’ingénieurs (filières MP, PSI et TSI)  et Etudiants titulaires de DEUG, DEUST ou DEUP en SM, SMI, SMA, SMP ou MIP, sur concours.<br>
+<u>--2ème année --</u><br>
+Ingénierie Informatique<br>
+Ingénierie des Télécommunications<br>
+Ingénierie du Management des Technologies de l’Information<br>
+-Conditions d’accès :<br>
+Filières ouvertes aux titulaires de licence en Mathématique, Physique, Informatique ou autre spécialités connexes aux Télécommunications et Technologies de l’Information, sur concours.<br>
+<strong><u>Diplômes:</u></strong><br>
+Ingénieur d’Etat<br>
+<strong><u>Durée d'études</u></strong><br>
+3 ans
+</p>
+</section>
+<section id="HIGH-TECH">
+<h3>High Technology School in Morocco</h3>
+<img src="HIGH-TECH.jfif"
+width="400"
+height="200">
+<p>
+Le Groupe High-Tech a été fondé en 1986 à Rabat par des personnalités de renommée mondiale qui avaient partagé leurs savoirs-faire académique et professionnel pour créer une école d’excellence autour de l’innovation pédagogique.<br>
+<strong><u>filières</u></strong><br>
+-Commerce, Finance, Marketing<br>
+-Audit et contrôle de gestion<br>
+-Gestion des Ressources humaines<br>
+-Systèmes d’Information, pilotage de l’Entreprise<br>
+-Ingénierie Conception et développements en génie logiciel<br>
+-Ingénierie systèmes et réseaux<br>
+-Ingénierie réseaux et télécoms<br>
+-Ingénierie automatisme et systèmes embarquée appliquées à la gestion des entreprises<br>
+<strong><u>Durée d'études</u></strong><br>
+5 ans d’études.
+</p>
+</section>
+<section id="ISGA">
+<h3>Institut supérieur d'ingénierie et des affaires</h3>
+<img src="ISGA.jfif"
+width="400"
+height="200">
+<p>
+Implanté au cœur de Rabat, capitale administrative du Maroc et ville du plus grand pôle universitaire et scientifique du pays (1 grande université, 5 grandes écoles d’ingénieurs, plusieurs laboratoires de recherche,…), l’ISGA Rabat jouit d’un environnement académique privilégié garantissant à ses étudiants une formation de qualité.<BR>
+    <strong><u>Filieres:</u></strong><br>
+<u>Filière Management :</u><br>
+- Système d’information Comptabilité, Contrôle et Audit<br>
+- Système d’information et Génie financier<br>
+- Système d’information Marketing et commerce<br>
+<u>Filière Ingénierie :</u><br>
+- Architecture et Sécurité des Systèmes et Réseaux Informatiques<br>
+- Ingénierie Logicielle et Développement Web<br>
+- Systèmes Informatiques d’Aide à la Décision<br>
+- Automatique Industrielle et Contrôle Qualité<BR>
+    <strong><u>Diplomes:</u></strong><br>
+L’Ecole d’Ingénierie est une école post-bac sur 5 ans d’études, habilitée  par le Ministère de l’Enseignement Supérieur à délivrer le Diplôme Supérieur d’Ingénierie.<br>
+L’Ecole de Management est une école post-bac sur 5 ans d’études habilitée par le Ministère de l’Enseignement Supérieur à délivrer le Diplôme Supérieur de Management. 
+
+</p>
+</section>
+<section id="ESSTI">
+<h3>Ecole Supérieure des Sciences et Technologies de l'Ingénierie</h3>
+<img src="ESSTI.png"
+width="400"
+height="200">
+<p>
+L’ESSTI, École Supérieure des Sciences et Technologie de l’Ingénierie, située au cœur de Rabat-Agdal, est une école d’ingénieurs bac+5 à tronc commun préparatoire intégré de deux ans. Elle a vocation à former des ingénieurs de haut niveau, destinés aux métiers de l’industrie et des services.<br>
+L’ESSTI propose des formations initiales conduisant à l’obtention de diplômes d’ingénieurs D’Etat, en :<br>
+    -Ingénierie des Systèmes Automatisés – ISA<br>
+    -Ingénierie des Système Industriel – ISI<BR>
+        <strong><u>Formations</u></strong><br>
+1.Tronc Commun Préparatoire de l'ESSTI <br>
+2.Ingénierie des systèmes automatisés (ISA)<br>
+3.Ingénierie des Systèmes Industriels et Logistiques (ISIL)<br>
+4.Master en Management de Projets Innovants<br>
+5.Master Génie Industriel<br>
+6.Génie civil<br>
+</p>
+</section>
+<section id="EMSI SOUISSI">
+<h3>Ecole Marocaine des Sciences de l'Ingénieur</h3>
+<img src="EMSI.jfif"
+width="400"
+height="200">
+<p>
+Fondée en 1986, l’Ecole Marocaine des Sciences de l’Ingénieur, EMSI, est la principale école d’ingénierie privée pluridisciplinaire au Maroc reconnue par l’Etat et est membre du réseau Honoris United Universities, 1er réseau panafricain d’enseignement supérieur privé.
+Pionnière depuis plus de 34 ans, l’EMSI offre cinq filières de spécialisation :<br>
+    Ingénierie Informatique et Réseaux<br>
+    Ingénierie Automatismes et Informatique Industrielle<br>
+    Génie Industriel<br>
+    Génie Civil Bâtiments et Travaux Publics<br>
+    Ingénierie Financière et Audit<br>
+    Le Groupe EMSI compte 4 écoles à travers le royaume, à Casablanca, Rabat et Marrakech et Tanger. L’EMSI a également développé un réseau de partenaires dont des entreprises de renom afin de faciliter l’insertion professionnelle de ses lauréats.<BR>
+</p>
+</section>
+<section id="EAD">
+<h3>ecole d'art et design</h3>
+<img src="EAD.jfif"
+width="400"
+height="200">
+<p>Les écoles Art et Design au Maroc sont des établissements spécialisés dans la formation à vocation artistique, dans les métiers de l'art, dont on cite : design d'intérieur, design de paysage, graphisme, multimédia. Pour les écoles art et design Maroc du secteur public, on compte l'Institut National des Beaux Arts et l'Ecole Supérieure des Beaux Arts.<br>
+     Ces écoles là sont accessibles sur étude de dossier et concours. Sinon des écoles privées art et design sont également accessibles pour ceux qui préfèrent les nouvelles filières de design et dessin.<BR>
+
+</p>
+</section>
+<section id="CNRST">
+<h3>Centre National pour la Recherche Scientifique et Technique</h3>
+<img src="CNRST.jfif"
+width="400"
+height="200">
+<p>
+Créé en 1976, le Centre National pour la Recherche Scientifique et Technique (CNRST) est un établissement public placé sous la tutelle de l’État. Le CNRST est un acteur principal du Système National de la Recherche et de l’Innovation.
+Organisation : <br>
+il est chargé de : <br>
+mettre en œuvre des programmes de recherche et de développement scientifiques et technologique ;<br>
+financer la recherche dans le cadre des choix et priorités fixés par l’autorité gouvernementale de tutelle ;<br>
+financer les programmes de coopération, de valorisation de la recherche, les bourses de recherche d’excellences ;<br>
+labelliser les structures de recherche les plus méritantes ;<br>
+assurer des services pour les chercheurs en leur donnant accès à l’information et à la documentation scientifique et technique, aux plateaux d’analyse et aux contenus numérique et internet.<BR>
+</p>
+</section>
+<section id="INAU">
+<h3>Institut National d'Aménagement et d'Urbanisme</h3>
+<img src="INAU.jfif"
+width="400"
+height="200">
+<p>
+Créé en 1981, l’Institut National d’Aménagement et d’Urbanisme est un établissement public de l’enseignement supérieur qui forme des professionnels et des cadres de haut niveau spécialisés dans les domaines de l’aménagement et de l’urbanisme.<br>
+L’INAU offre trois cycles de formation en aménagement et urbanisme :<br>
+    1.Un Cycle supérieur complet de formation du diplôme de l’Institut National d’Aménagement et d’Urbanisme DINAU (Bac+5)<br>
+    2.Un Cycle Supérieur de Formation des Aménagistes-Urbanistes (Master spécialisé en Aménagement et Urbanisme)<br>
+    3.Un cycle doctoral.<BR>
+        <strong>Filières:</strong><br>
+Le système de la formation a été revu depuis 2013. Aujourd’hui, l’INAU est à un grand tournant de son histoire qui l’amène vers une refonte totale de ses missions, ses activités et son produit final lui permettant de s’adapter aux nouvelles logiques de développement territorial. Ainsi, il a réformé son cycle supérieur en aménagement et urbanisme en un cycle de formation complet et continu qui s’étale sur 5 ans (Bac +5).<br>
+Ce cycle est sanctionné par l’obtention d’un diplôme d’Etat (Master) dénommé « Diplôme de l’Institut National d’Aménagement et d’Urbanisme » (DINAU). L’accès au Cycle du DINAU se fait par voie de concours. Il est ouvert aux candidats titulaires d’un diplôme de Baccalauréat scientifique, économique ou technique.<br>
+</p>
+</section>
+<section id="EMG">
+<h3>L'Ecole Marocaine d'Ingénierie</h3>
+<img src="EMG.png"
+width="400"
+height="200">
+<p>
+L’EMG Rabat est une école privée d’Ingénierie en Génie Civil et Génie Industriel, qui offre deux types de formations :<br>
+une formation initiale, à temps plein, d’ingénieurs dans les domaines du génie civil et du génie industriel destinée aux bacheliers et aux Bac+2/+3/+4 suivant les passerelles d’accès.<br>
+des formations continues, en temps partiel ou aménagé, dans les domaines de l’ingénierie et du management, destinées aux professionnels en exercice et aux candidats aux programmes d’insertion.<br>
+<strong>Filières:</strong>
+    Génie Civil offrant deux options de spécialisation: Études ou travaux<br>
+    Filière Génie Industriel, Option: gestion de projets, logistique et système d’information, management des projets innovants en construction.<br>
+    <strong>Durée d'études:</strong><br>
+    5 ans d’études.
+</p>
+</section>
+<section id="EMBCI">
+<h3>L’Ecole Marocaine de Banque et de Commerce International</h3>
+<img src="EMBCI.jfif"
+width="400"
+height="200">
+<p>
+L’Ecole Marocaine de Banque et de Commerce International –EMBCI- est un établissement d’enseignement supérieur privé.<BR>
+L’EMBCI accompagne ainsi les mutations profondes que connaît le Maroc face aux défis de la mondialisation, et adapte en permanence son cursus et sa formation pour mieux répondre aux besoins et aux exigences du marché de l’emploi.<br>
+Organisé autour d’un système d’évaluation continu, le programme de l’EMBCI s’étale sur 3 ans (Filière accréditée par le Ministère de l’Enseignement Supérieur) ou sur 5 ans (Master en double spécialité banque et commerce international).<BR>
+    <strong>Filières:</strong><br>
+Banque<br>
+Commerce International<br>
+<strong>Durée d'études:</strong><br>
+Organisé autour d’un système d’évaluation continu, le programme de l’EMBCI s’étale sur <br>
+3 ans après le Bac (1er cycle) .<br>
+5 ans après le Bac (2ème cycle) .<br>
+</p>
+</section>
+<section id="EMSI">
+<h3>Ecole Marocaine des Sciences de l'Ingénieur</h3>
+<img src="EMSI.jfif"
+width="400"
+height="200">
+<p>
+    Fondée en 1986, l’Ecole Marocaine des Sciences de l’Ingénieur, EMSI, est la principale école d’ingénierie privée pluridisciplinaire au Maroc reconnue par l’Etat et est membre du réseau Honoris United Universities, 1er réseau panafricain d’enseignement supérieur privé.
+    Pionnière depuis plus de 34 ans, l’EMSI offre cinq filières de spécialisation :<br>
+        Ingénierie Informatique et Réseaux<br>
+        Ingénierie Automatismes et Informatique Industrielle<br>
+        Génie Industriel<br>
+        Génie Civil Bâtiments et Travaux Publics<br>
+        Ingénierie Financière et Audit<br>
+        Le Groupe EMSI compte 4 écoles à travers le royaume, à Casablanca, Rabat et Marrakech et Tanger. L’EMSI a également développé un réseau de partenaires dont des entreprises de renom afin de faciliter l’insertion professionnelle de ses lauréats.<BR>
+    
+</p>
+</section>
+<section id="ENSA">
+<h3>École Nationale Supérieure de l'Administration</h3>
+<img src="ENSA.jfif"
+width="400"
+height="200">
+<p>
+ L’Ecole Nationale Supérieure de l’Administration - ENSA Rabat - est une école supérieure publique ayant pour objectif de former de hauts cadres et de les préparer aux responsabilités et aux exigences de la haute fonction publique. L’ENSA Rabat a pour ambition de former une nouvelle génération de hauts fonctionnaires. La réingénierie de la formation doit viser à faire d’eux des fonctionnaires exemplaires et engagés dans la vision du Roi Mohammed VI, des managers publics efficaces, de véritables vecteurs/accélérateurs des reformes et ambassadeurs des valeurs du service public.<BR>
+<strong>Filières:</strong><br>
+Cycle préparatoire<BR>
+-Le cycle préparatoire a vocation à :<br>
+Fournir des éléments de base nécessaires dans les trois épreuves écrites d’admissibilité <br>
+Préparer les candidats aux épreuves en termes de savoir-faire, à l’écrit comme à l’oral <br>
+Sensibiliser les candidats aux exigences et aux modalités de préparation des nouvelles épreuves.<BR>
+<strong>Formation initiale:</strong>
+Le cycle de la formation initiale a pour vocation de former des cadres à haut potentiel et de les doter des compétences nécessaires à l’accomplissement des missions de conception, de planification, de suivi et d’évaluation des programmes et des politiques publiques dans différentes administrations, établissements publics et collectivités territoriales.<BR>
+Formation continue<bR>
+L’ENSA Rabat ambitionne de créer un dispositif de formation continue en appui au chantier de modernisation de l’administration publique dans le cadre d’une démarche partenariale et opérationnelle. Ce dispositif est conçu pour permettre aux fonctionnaires de l’administration centrale et déconcentrée ainsi qu’aux fonctionnaires territoriaux de prendre du recul, de trouver des idées novatrices et d’enrichir la palette de leurs compétences managériales.
+<strong>Diplomes</strong>
+Diplôme de l’Ecole Nationale Supérieure de l’Administration<br>
+<strong>Durée d'études</strong><br>
+24 mois pour la formation initiale, dont 6 mois sont consacrés aux stages pratiques
+</p>
+</section>
+<small id="citation">
+Adapted from
+<a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
+</small>
+</section>
+</div>
+<script>
+// TO MAKE THE MAP APPEAR YOU MUST
+// ADD YOUR ACCESS TOKEN FROM
+// https://account.mapbox.com
+mapboxgl.accessToken = 'pk.eyJ1IjoicmloYWJ1czEiLCJhIjoiY2xhMDd2NDRnMGdwaDNxbXNycmU2YjJ3biJ9.5nROirEOqU9ZDTetkpJ8rg';
+const map = new mapboxgl.Map({
+container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/mapbox/streets-v12',
+center: [-6.85175716777786,33.98054997733642],
+zoom: 20,
+bearing: 27,
+pitch: 45
+});
+ map.on('load', () => {
+        map.addSource('chapter', {
+        type: 'geojson',
+        // Use a URL for the value for the `data` property.
+        data: 'chapters'
+        });
+         
+        map.addLayer({
+            id: 'chapter',
+            type: 'circle',
+            source: chapters,
+            filter: ['has', 'point_count'],
+            paint: {
+            // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+            // with three steps to implement three types of circles:
+            //   * Blue, 20px circles when point count is less than 100
+            //   * Yellow, 30px circles when point count is between 100 and 750
+            //   * Pink, 40px circles when point count is greater than or equal to 750
+            'circle-color': [
+            'step',
+            ['get', 'point_count'],
+            '#51bbd6',
+            100,
+            '#f1f075',
+            750,
+            '#f28cb1'
+            ],
+            'circle-radius': [
+            'step',
+            ['get', 'point_count'],
+            20,
+            100,
+            30,
+            750,
+            40
+            ]
+            }
+            });
+        
+        });
+function createPopUp(chapt_name) 
+    {
+        const popUps = document.getElementsByClassName('mapboxgl-popup');
+        if (popUps[0]) popUps[0].remove();
+        const popup = new mapboxgl.Popup({ closeOnClick: false })
+        .setLngLat(chapters[chapt_name].center)
+        .setHTML(
+        `<h3 class="nom_chap">Institut / Ecole</h3><h4>${chapt_name}</h4>`
+        )
+        .addTo(map);
+    }
+
+function add_markers(chapt_name) {
+    console.log(chapt_name)
+
+    const el = document.createElement('div');
+    /* Assign the `marker` class to each marker for styling. */
+    el.className = '__marker__';
+
+    new mapboxgl.Marker(el, { offset: [0, -23] })
+    .setLngLat(chapters[chapt_name].center)
+    .addTo(map);
+
+    //setTimeout()
+    createPopUp(chapt_name)
+
+    }
+     
+const chapters = {
+'ERSSM': {
+bearing: 27,
+center: [ -6.85626124,34.01837342 ],
+zoom: 14,
+pitch: 10,
+style:'circle'},
+'CISSF': {
+duration: 6000,
+center: [ -6.846855748,34.00590903 ],
+bearing: 150,
+zoom: 15,
+pitch: 0
+},
+'COPE': {
+bearing: 90,
+center: [ -6.880167603,33.96844725 ],
+zoom: 20,
+speed: 0.9,
+pitch: 40
+},
+'CPR': {
+bearing: 90,
+center: [ -6.858856824,33.98980186 ],
+zoom: 20
+},
+'ENS': {
+bearing: 45,
+center: [ -6.825920637,33.98059576 ],
+zoom: 20,
+pitch: 20,
+speed: 0.5
+},
+'ENSET': {
+bearing: 180,
+center: [ -6.877365109,33.96910089 ],
+zoom: 20
+},
+'CFIE': {
+bearing: 90,
+center: [ -6.85744295,34.00757227 ],
+zoom: 20,
+pitch: 40
+},
+'FLSH': {
+bearing: 90,
+center: [ -6.83996558,34.00711765 ],
+zoom: 20,
+pitch: 20},
+'FMD': {
+bearing: 27,
+center: [ -6.87032818,33.98092966 ],
+zoom: 20,
+pitch: 20},
+'FMP': {
+bearing: 27,
+center: [ -6.855981367,33.98340803 ],
+zoom: 20,
+pitch: 20},
+'FS': {
+bearing: 27,
+center: [ -6.838228065,34.00816291 ],
+zoom: 20,
+pitch: 20},
+'EMI': {
+bearing: 27,
+center: [ -6.853568798,33.99768841 ],
+zoom: 20,
+pitch: 20},
+'ENIM': {
+bearing: 27,
+center: [ -6.853568798,33.99768841 ],
+zoom: 20,
+pitch: 20},
+'ENSIAS': {
+bearing: 27,
+center: [ -6.867548251,33.98446298 ],
+zoom: 20,
+pitch: 20},
+'ESI': {
+bearing: 27,
+center: [ -6.865307948,33.98231225 ],
+zoom: 20,
+pitch: 20},
+'ENA': {
+bearing: 27,
+center: [ -6.861369513,33.98704399 ],
+zoom: 20,
+pitch: 20},
+'EGE': {
+bearing: 27,
+center: [ -6.869955046,33.98667249 ],
+zoom: 20,
+pitch: 20},
+'HEC': {
+bearing: 27,
+center: [ -6.880508537,33.95772332 ],
+zoom: 20,
+pitch: 20},
+'HEM': {
+bearing: 27,
+center: [ -6.826619592,33.97839218 ],
+zoom: 20,
+pitch: 20},
+'IAV': {
+bearing: 90,
+center: [ -6.866760894,33.97667146 ],
+zoom: 20,
+pitch: 20}, 
+'IERA': {
+bearing: 90,
+center: [ -6.862729491,33.98570171 ],
+zoom: 20,
+pitch: 20},
+'INPT': {
+bearing: 90,
+center: [ -6.86722641,33.98063262 ],
+zoom: 20,
+pitch: 20},  
+'HIGH-TECH': {
+bearing: 90,
+center: [ -6.849573849,33.99517302 ],
+zoom: 20,
+pitch: 20},'ISGA': {
+bearing: 90,
+center:  [ -6.845628834,34.0051031 ],
+zoom: 20,
+pitch: 20},'ESSTI': {
+bearing: 90,
+center: [ -6.847861719,34.0026842 ],
+zoom: 20,
+pitch: 20},
+'EMSI SOUISSI': {
+bearing: 90,
+center: [ -6.837575533,33.97195265 ],
+zoom: 20,
+pitch: 20},
+'EAD': {
+bearing: 90,
+center: [ -6.847515871,34.00894633 ],
+zoom: 20,
+pitch: 20},'CNRST': {
+bearing: 90,
+center: [ -6.874645336,33.97308529 ],
+zoom: 20,
+pitch: 20},'INAU': {
+bearing: 90,
+center: [ -6.860910979,33.98796576 ],
+zoom: 20,
+pitch: 20},'EMG': {
+bearing: 90,
+center: [ -6.845113769,34.00510296 ],
+zoom: 20,
+pitch: 20},'EMBCI': {
+bearing: 90,
+center: [ -6.827688082,33.98594638 ],
+zoom: 20,
+pitch: 20},'EMSI': {
+bearing: 90,
+center: [ -6.851124356,34.00056388 ],
+zoom: 20,
+pitch: 20},'EMSI AGDAL': {
+bearing: 90,
+center: [ -6.844428126,34.00241236 ],
+zoom: 20,
+pitch: 20},'ENSA': {
+bearing: 90,
+center: [ -6.839187338,34.01438958 ],
+zoom: 20,
+pitch: 20}     
+};
+
+let activeChapterName = 'ERSSM';
+function setActiveChapter(chapterName) 
+    {
+        if (chapterName === activeChapterName) return;
+
+        map.flyTo(chapters[chapterName]);
+        add_markers(chapterName);
+
+        document.getElementById(chapterName).classList.add('active');
+        document.getElementById(activeChapterName).classList.remove('active');
+
+        activeChapterName = chapterName;
+    }
+
+function isElementOnScreen(id) {
+const element = document.getElementById(id);
+const bounds = element.getBoundingClientRect();
+return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+
+// On every scroll event, check which element is on screen
+window.onscroll = () => {
+for (const chapterName in chapters) {
+if (isElementOnScreen(chapterName)) {
+setActiveChapter(chapterName);
+break;
+}
+}
+};
+</script>
+
+</body>
+</html>

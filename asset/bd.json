@@ -1,0 +1,931 @@
+[
+    {
+        "nom": "Hassan II - Casablanca",
+        "site": "http://www.univh2c.ma/",
+        "ville": "Casablanca",
+        "info": {
+            "creation": "1975",
+            "nb_new": "34360",
+            "total": "113312",
+            "nb_etab": "17",
+            "nb_etranger": "2022"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSAM",
+                "site": "http://www.ensam-casa.ma/presentation",
+                "logo": "./img/img_etab/ensam-casa.png"
+            },
+            {
+                "Nom": "ENSEM",
+                "site": "http://www.ensem.ac.ma/",
+                "logo": "./img/img_etab/ensem.png"
+            },
+            {
+                "Nom": "ENCG",
+                "site": "https://www.encgcasa.ac.ma/",
+                "logo": "./img/img_etab/encg-casablanca.png"
+            },
+            {
+                "Nom": "FMPC",
+                "site": "http://fmpc.uh2c.ac.ma/",
+                "logo": "./img/img_etab/FMP-Casa.png"
+            },
+            {
+                "Nom": "FMDC",
+                "site": "http://www.fmd-uh2c.ac.ma/",
+                "logo": "./img/img_etab/FMD-Casa.png"
+            },
+            {
+                "Nom": "ENSET Mohammedia",
+                "site": "http://enset.um5.ac.ma/",
+                "logo": "./img/img_etab/ENSET-Mohammedia-Ecole-Nationale-Supe\u0301rieure-de-lEnseignement-Technique-Mohammedia.png"
+            },
+            {
+                "Nom": "FSJES Ain Chock",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FSJES Ain Sebaa",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FSJES Mohammedia",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FS Ain Chock",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FS Ben M\u2019Sik",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FST Mohammedia",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FLSH Ain Chock",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FLSH Ben M\u2019Sik",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "FLSH Mohammedia",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "ENS",
+                "site": [
+                    null
+                ],
+                "logo": null
+            },
+            {
+                "Nom": "ESTC",
+                "site": [
+                    null
+                ],
+                "logo": null
+            }
+        ],
+        "id": 2,
+        "coordinates": [
+            33.594023547510496,
+            -7.631972465762692
+        ],
+        "img": "./img/images/t2.jpg",
+        "logo": "./img/img2.png",
+        "region": "Casablanca-Settat"
+    },
+    {
+        "nom": "Abdelmalek Essaadi - T\u00e9touan",
+        "site": "http://www.uae.ma/website/",
+        "ville": "T\u00c3\u00a9touan",
+        "info": {
+            "creation": "1989",
+            "nb_new": "24657",
+            "total": "105745",
+            "nb_etab": "15",
+            "nb_etranger": "1210"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSA Tanger",
+                "site": null,
+                "logo": "./img/img_etab/ENSA-TANGER.png"
+            },
+            {
+                "Nom": "ENSA T\u00e9touan",
+                "site": "http://ensate.uae.ac.ma/",
+                "logo": "./img/img_etab/ensa-tetouan.png"
+            },
+            {
+                "Nom": "ENCG Tanger",
+                "site": "https://www.encgt.ma/",
+                "logo": "./img/img_etab/encg-tanger.png"
+            },
+            {
+                "Nom": "FMP Tanger",
+                "site": "http://www.fmpt.ac.ma",
+                "logo": "./img/img_etab/FMP-Tanger.png"
+            },
+            {
+                "Nom": "ESRFT",
+                "site": "http://www.esrft.uae.ma",
+                "logo": "./img/img_etab/ESRFT.png"
+            },
+            {
+                "Nom": "ENSA Hoceima",
+                "site": "https://ensah.ma/",
+                "logo": "./img/img_etab/ENSA-HOCEIMA.png"
+            },
+            {
+                "Nom": "FSJES Tanger",
+                "site": "http://www.fsjest.ma/",
+                "logo": "./img/img_etab/FSJES-tanger.png"
+            },
+            {
+                "Nom": "FSJES T\u00e9touan",
+                "site": "http://www.fsjeste.ma/",
+                "logo": "./img/img_etab/FSJES-tetouan.png"
+            },
+            {
+                "Nom": "FLSH T\u00e9touan",
+                "site": "http://www.flsht.ac.ma/",
+                "logo": "./img/img_etab/flsh-te\u0301touan.png"
+            },
+            {
+                "Nom": "FS T\u00e9touan",
+                "site": "http://www.fst.ac.ma/",
+                "logo": "./img/img_etab/FST-Te\u0301touan.png"
+            },
+            {
+                "Nom": "FST Tanger",
+                "site": "http://www.fstt.ac.ma/",
+                "logo": "./img/img_etab/FST-Tanger.png"
+            },
+            {
+                "Nom": "FST Hoceima",
+                "site": "https://www.fsth.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "ENS T\u00e9ouan",
+                "site": "https://www.enstetouan.ma/",
+                "logo": "./img/img_etab/ENS-Te\u0301touan.png"
+            },
+            {
+                "Nom": "FP Larache",
+                "site": "http://fpl.ma/apps/public/",
+                "logo": "./img/img_etab/FP-Larache.png"
+            },
+            {
+                "Nom": "Facult\u00e9 Ossol Ad-dine",
+                "site": "http://www.fod.ac.ma/",
+                "logo": "./img/img_etab/F-Ossol-Eddine-Te\u0301touan.png"
+            }
+        ],
+        "id": 7,
+        "coordinates": [
+            35.560787975035346,
+            -5.364578723755583
+        ],
+        "img": "./img/images/t7.jpg",
+        "logo": "./img/img3.png",
+        "region": "Tanger-Tetouan-Hoceima"
+    },
+    {
+        "nom": "Mohammed Premier - Oujda",
+        "site": "http://www.ump.ma/",
+        "ville": "Oujda",
+        "info": {
+            "creation": "1978",
+            "nb_new": "16322",
+            "total": "64461",
+            "nb_etab": "8",
+            "nb_etranger": "376"
+        },
+        "etabs": [
+            {
+                "Nom": "FMP Oujda",
+                "site": "http://fmpo.ump.ma/",
+                "logo": "./img/img_etab/FMP-Oujda.png"
+            },
+            {
+                "Nom": "ENSA Oujda",
+                "site": "http://ensao.ump.ma/",
+                "logo": "./img/img_etab/ensa-oujda.png"
+            },
+            {
+                "Nom": "ENCG Oujda",
+                "site": "http://encgo.ump.ma/",
+                "logo": "./img/img_etab/ENCG-Oujda.png"
+            },
+            {
+                "Nom": "FSJES Oujda",
+                "site": "http://droit.ump.ma/",
+                "logo": "./img/img_etab/Fsjes-oujda.png"
+            },
+            {
+                "Nom": "FS Oujda",
+                "site": "http://fso.ump.ma/",
+                "logo": "./img/img_etab/fs-oujda-.png"
+            },
+            {
+                "Nom": "EST Oujda",
+                "site": "http://esto.ump.ma/",
+                "logo": "./img/img_etab/est-oujda.png"
+            },
+            {
+                "Nom": "FLSH Oujda",
+                "site": "http://lettres.ump.ma/",
+                "logo": "./img/img_etab/flsh-oujda.png"
+            }
+        ],
+        "id": 6,
+        "coordinates": [
+            34.6521014302971,
+            -1.8977194169528688
+        ],
+        "img": "./img/images/t6.jpg",
+        "logo": "./img/img4.png",
+        "region": "Oriental"
+    },
+    {
+        "nom": "Sultan Moulay Slimane - Beni Mellal",
+        "site": "http://www.usms.ac.ma/",
+        "ville": "Beni Mellal",
+        "info": {
+            "creation": "2007",
+            "nb_new": "9727",
+            "total": "31030",
+            "nb_etab": "4",
+            "nb_etranger": "111"
+        },
+        "etabs": [
+            {
+                "Nom": "FP Beni Mellal",
+                "site": "http://www.fpbm.ma/",
+                "logo": "./img/img_etab/fp-beni-mellal.png"
+            },
+            {
+                "Nom": "EST Beni Mellal",
+                "site": "http://estbm.ac.ma/",
+                "logo": "./img/img_etab/est-beni-mellal.png"
+            },
+            {
+                "Nom": "FST Beni Mellal",
+                "site": "http://www.fstbm.ac.ma/",
+                "logo": "./img/img_etab/fst-beni-mellal.png"
+            },
+            {
+                "Nom": "FLSH Beni Mellal",
+                "site": "http://www.flshbm.ma/",
+                "logo": "./img/img_etab/flsh-beni-mellal.png"
+            }
+        ],
+        "id": 5,
+        "coordinates": [
+            32.33607662522239,
+            -6.3695207104200415
+        ],
+        "img": "./img/images/t5.png",
+        "logo": "./img/img5.png",
+        "region": "Beni Mellal-Khenifra"
+    },
+    {
+        "nom": "Sidi Mohammed Ben Abdellah - F\u00e8s",
+        "site": "http://www.usmba.ac.ma/",
+        "ville": "F\u00c3\u00a9s",
+        "info": {
+            "creation": "1975",
+            "nb_new": "24220",
+            "total": "85840",
+            "nb_etab": "12",
+            "nb_etranger": "1647"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSA F\u00e8s",
+                "site": "https://www.ensaf.ac.ma/",
+                "logo": "./img/img_etab/ENSA-FES.png"
+            },
+            {
+                "Nom": "ENCG F\u00e8s",
+                "site": "http://encgf-usmba.ac.ma/",
+                "logo": "./img/img_etab/encgfes.png"
+            },
+            {
+                "Nom": "FMP F\u00e8s",
+                "site": "http://ww2.fmp-usmba.ac.ma/",
+                "logo": "./img/img_etab/FMP-FES.png"
+            },
+            {
+                "Nom": "ENS F\u00e8s",
+                "site": "http://ens.usmba.ac.ma/",
+                "logo": "./img/img_etab/ens-fe\u0300s.png"
+            },
+            {
+                "Nom": "EST F\u00e8s",
+                "site": "http://www.est-usmba.ac.ma/",
+                "logo": "./img/img_etab/est-fe\u0300s-.png"
+            },
+            {
+                "Nom": "FST F\u00e8s",
+                "site": "http://www.fst-usmba.ac.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "FSJES F\u00e8s",
+                "site": "http://fsjes.usmba.ac.ma/",
+                "logo": "./img/img_etab/FSJES-Fe\u0300s.png"
+            },
+            {
+                "Nom": "FLSH Sa\u00efss",
+                "site": "http://www.fls.usmba.ac.ma/",
+                "logo": "./img/img_etab/fsjes-Saiss.png"
+            },
+            {
+                "Nom": "FLSH Dhar El Mahraz",
+                "site": "http://www.fldm.usmba.ac.ma/",
+                "logo": "./img/img_etab/FLSH-Dhar-lmahraz.png"
+            },
+            {
+                "Nom": "FS Dhar El Mahraz",
+                "site": "http://www.fsdmfes.ac.ma/",
+                "logo": "./img/img_etab/fs-dhar-lmahraz.png"
+            },
+            {
+                "Nom": "Facult\u00e9 Chariaa F\u00e8s",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/Faculte\u0301-Chariaa-Fe\u0300s.png"
+            },
+            {
+                "Nom": "FP Taza",
+                "site": "https://fpt.usmba.ac.ma/",
+                "logo": "./img/img_etab/FP-Taza.png"
+            }
+        ],
+        "id": 3,
+        "coordinates": [
+            34.033971518207096,
+            -4.979865567560263
+        ],
+        "img": "./img/images/t3.jpg",
+        "logo": "./img/img6.png",
+        "region": "Fes-Meknes"
+    },
+    {
+        "nom": "Moulay Isma\u00efl - Mekn\u00e8s",
+        "site": "http://www.univh2c.ma/",
+        "ville": "Mekn\u00c3\u00a9s",
+        "info": {
+            "creation": "1989",
+            "nb_new": "18133",
+            "total": "69447",
+            "nb_etab": "9",
+            "nb_etranger": "557"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSAM Mekn\u00e8s",
+                "site": "http://www.ensam-umi.ac.ma/",
+                "logo": "./img/img_etab/ensam-meknes.png"
+            },
+            {
+                "Nom": "ENS Mekn\u00e8s",
+                "site": "http://www.ens.umi.ac.ma/",
+                "logo": "./img/img_etab/ensam-meknes.png"
+            },
+            {
+                "Nom": "EST Mekn\u00e8s",
+                "site": "http://www.est-umi.ac.ma/",
+                "logo": "./img/img_etab/EST-meknes.png"
+            },
+            {
+                "Nom": "FSJES Mekn\u00e8s",
+                "site": "http://www.fsjes-umi.ac.ma/",
+                "logo": "./img/img_etab/FSJES-meknes.png"
+            },
+            {
+                "Nom": "FS Mekn\u00e8s",
+                "site": "http://www.fs-umi.ac.ma/",
+                "logo": "./img/img_etab/fs-meknes.png"
+            },
+            {
+                "Nom": "FLSH Mekn\u00e8s",
+                "site": "http://www.flsh.umi.ac.ma/",
+                "logo": "./img/img_etab/flsh-meknes.png"
+            },
+            {
+                "Nom": "EST Kh\u00e9nifra",
+                "site": "https://www.estk.ac.ma/",
+                "logo": "./img/img_etab/EST-Khe\u0301nifra.png"
+            },
+            {
+                "Nom": "FST Errachidia",
+                "site": "http://fste-umi.ac.ma/",
+                "logo": "./img/img_etab/fst-errachidia.png"
+            },
+            {
+                "Nom": "FP Errachidia",
+                "site": "http://www.fpe.umi.ac.ma/",
+                "logo": "./img/img_etab/FP-errachidia.png"
+            }
+        ],
+        "id": 10,
+        "coordinates": [
+            33.85753173474091,
+            -5.57473262126095
+        ],
+        "img": "./img/images/t10.jpg",
+        "logo": "./img/img7.png",
+        "region": "Fes-Meknes"
+    },
+    {
+        "nom": "Ibn Tofail - K\u00e9nitra",
+        "site": "http://www.uit.ac.ma/fr/",
+        "ville": "k\u00c3\u00a9nitra",
+        "info": {
+            "creation": "1985",
+            "nb_new": "11845",
+            "total": "42966",
+            "nb_etab": "6",
+            "nb_etranger": "1152"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSA K\u00e9nitra",
+                "site": null,
+                "logo": "./img/img_etab/ENSA-KENITRA.png"
+            },
+            {
+                "Nom": "ENCG K\u00e9nitra",
+                "site": "http://encg.uit.ac.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "EST K\u00e9nitra",
+                "site": "https://www.encgcasa.ac.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "FSJES K\u00e9nitra",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/FSJES-ke\u0301nitra.png"
+            },
+            {
+                "Nom": "FLSH K\u00e9nitra",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/FLSH-Ke\u0301nitra.png"
+            },
+            {
+                "Nom": "FS K\u00e9nitra",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/FS-ke\u0301nitra.png"
+            }
+        ],
+        "id": 11,
+        "coordinates": [
+            34.24621076777728,
+            -6.584873095726885
+        ],
+        "img": "./img/images/t9.jpg",
+        "logo": "./img/img9.png",
+        "region": "Rabat-Sale-Kenitra"
+    },
+    {
+        "nom": "Cadi Ayyad - Marrakech",
+        "site": "https://www.uca.ma/",
+        "ville": "Marrakech",
+        "info": {
+            "creation": "1978",
+            "nb_new": "28675",
+            "total": "89516",
+            "nb_etab": "13",
+            "nb_etranger": "938"
+        },
+        "etabs": [
+            {
+                "Nom": "ENSA Marrakech",
+                "site": "http://www.ensa.ac.ma/",
+                "logo": "./img/img_etab/ENSA-MARRAKECH.png"
+            },
+            {
+                "Nom": "ENCG Marrakech",
+                "site": "http://www.encg.ucam.ac.ma/",
+                "logo": "./img/img_etab/encg-merrakech.png"
+            },
+            {
+                "Nom": "ENSA Safi",
+                "site": "http://www.ensas.uca.ma/",
+                "logo": "./img/img_etab/ENSA-SAFI.png"
+            },
+            {
+                "Nom": "FST Marrakech",
+                "site": "http://www.fstg-marrakech.ac.ma/",
+                "logo": "./img/img_etab/FST-marrakech.png"
+            },
+            {
+                "Nom": "EST Safi",
+                "site": "http://www.ests.uca.ma/",
+                "logo": "./img/img_etab/EST-Safi.png"
+            },
+            {
+                "Nom": "EST Essaouira",
+                "site": "http://www.este.ucam.ac.ma/",
+                "logo": "./img/img_etab/est-essaouira.png"
+            },
+            {
+                "Nom": "FSJES Marrakech",
+                "site": "http://www4.fsjes.uca.ma/",
+                "logo": "./img/img_etab/fsjes-marrakech.png"
+            },
+            {
+                "Nom": "FLSH Marrakech",
+                "site": "http://www.flm.ucam.ac.ma/",
+                "logo": "./img/img_etab/FLSH-Marrakech.png"
+            },
+            {
+                "Nom": "FMP Marrakech",
+                "site": "https://www.uca.ma/fmpm",
+                "logo": "./img/img_etab/FMP-Marrakech.png"
+            },
+            {
+                "Nom": "FS Semlalia",
+                "site": "http://fssm.uca.ma/",
+                "logo": "./img/img_etab/fs-semlalia.png"
+            },
+            {
+                "Nom": "FP Safi",
+                "site": "https://www.uca.ma/fps",
+                "logo": "./img/img_etab/fp-safi.png"
+            },
+            {
+                "Nom": "ENS Marrakech",
+                "site": "http://www.ens-marrakech.ac.ma/",
+                "logo": "./img/img_etab/ENS-marrakech.png"
+            },
+            {
+                "Nom": "FLA Marrakech",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/FLA-marrakech.png"
+            }
+        ],
+        "id": 4,
+        "coordinates": [
+            31.66451381066009,
+            -7.998599890222562
+        ],
+        "img": "./img/images/t4.jpg",
+        "logo": "./img/img8.png",
+        "region": "Marrakech-Safi"
+    },
+    {
+        "nom": "Choua\u00efb Doukkali - El Jadida",
+        "site": "http://www.ucd.ac.ma/",
+        "ville": "El Jadida",
+        "info": {
+            "creation": "1985",
+            "nb_new": "6520",
+            "total": "20560",
+            "nb_etab": "6",
+            "nb_etranger": "341"
+        },
+        "etabs": [
+            {
+                "Nom": "ENCG El Jadida",
+                "site": "http://www.encgj.ucd.ac.ma/",
+                "logo": "./img/img_etab/encg-eljadida.png"
+            },
+            {
+                "Nom": "ENSA El Jadida",
+                "site": "http://www.ensaj.ucd.ac.ma/",
+                "logo": "./img/img_etab/ENSA-JADIDA.png"
+            },
+            {
+                "Nom": "EST Sidi Bennour",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/EST-Sidi-bennour.png"
+            },
+            {
+                "Nom": "FSJES El Jadida",
+                "site": "http://www.fpj.ucd.ac.ma/",
+                "logo": "./img/img_etab/fsjes-el-jadida.png"
+            },
+            {
+                "Nom": "FS El Jadida",
+                "site": "http://www.fs.ucd.ac.ma/",
+                "logo": "./img/img_etab/FS-el-jadida.png"
+            },
+            {
+                "Nom": "FLSH El Jadida",
+                "site": "http://www.flshj.ucd.ac.ma/",
+                "logo": "./img/img_etab/flsh-el-jadida.png"
+            }
+        ],
+        "id": 8,
+        "coordinates": [
+            33.22761617164294,
+            -8.488047401977298
+        ],
+        "img": "./img/images/t8.jpg",
+        "logo": "./img/img11.png"
+    },
+    {
+        "nom": "Hassan I - Settat",
+        "site": "http://www.uh1.ac.ma/",
+        "ville": "Settat",
+        "info": {
+            "creation": "1997",
+            "nb_new": "9827",
+            "total": "36745",
+            "nb_etab": "9",
+            "nb_etranger": "692"
+        },
+        "etabs": [
+            {
+                "Nom": "ENCG Settat",
+                "site": "https://encg-settat.org/",
+                "logo": "./img/img_etab/ENCG-Casa-1.png"
+            },
+            {
+                "Nom": "ENSA Khouribga",
+                "site": null,
+                "logo": "./img/img_etab/ensa-khouribga.png"
+            },
+            {
+                "Nom": "ENSA Berrechid",
+                "site": "http://www.est.uh1.ac.ma/",
+                "logo": "./img/img_etab/ENSA-Berrechid.png"
+            },
+            {
+                "Nom": "EST Berrechid",
+                "site": [
+                    null
+                ],
+                "logo": "./img/img_etab/EST-berrechid.png"
+            },
+            {
+                "Nom": "FST Settat",
+                "site": "http://www.fsts.ac.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "FP Khouribga",
+                "site": "http://www.fpk.ac.ma/",
+                "logo": "./img/img_etab/FP-khouribga.png"
+            },
+            {
+                "Nom": "FSJES Settat",
+                "site": "http://www.fsjes-settat.ma/",
+                "logo": "./img/img_etab/FSJES-settat.png"
+            },
+            {
+                "Nom": "ISSS",
+                "site": "http://www.isss.uh1.ac.ma/",
+                "logo": "./img/img_etab/ISSS.png"
+            },
+            {
+                "Nom": "ISS Settat",
+                "site": "http://www.uh1.ac.ma/candidature-iss",
+                "logo": "./img/img_etab/ISS.png"
+            }
+        ],
+        "id": 9,
+        "coordinates": [
+            33.02911006230513,
+            -7.615663636457712
+        ],
+        "img": "./img/images/t11.png",
+        "logo": "./img/img10.png",
+        "region": "Casablanca-Settat"
+    },
+    {
+        "nom": "Mohammed V - Rabat",
+        "site": "http://www.um5.ac.ma/",
+        "ville": "Rabat",
+        "info": {
+            "creation": "1957",
+            "nb_new": "22915",
+            "total": "79459",
+            "nb_etab": "19",
+            "nb_etranger": "1931"
+        },
+        "etabs": [
+            {
+                "Nom": "EMI",
+                "site": "https://www.emi.ac.ma/",
+                "logo": "./img/img_etab/emi-.png"
+            },
+            {
+                "Nom": "ENSIAS",
+                "site": "http://ensias.um5.ac.ma/",
+                "logo": null
+            },
+            {
+                "Nom": "ENSET Rabat",
+                "site": "http://enset.um5.ac.ma/",
+                "logo": "./img/img_etab/enset-Rabat.png"
+            },
+            {
+                "Nom": "FMPR",
+                "site": "http://fmp.um5.ac.ma/",
+                "logo": "./img/img_etab/FMP-Rabat.png"
+            },
+            {
+                "Nom": "FMDR",
+                "site": "http://fmd.um5.ac.ma/",
+                "logo": "./img/img_etab/FMD-RABAT.png"
+            },
+            {
+                "Nom": "EST Sal\u00e9",
+                "site": "http://www.ests.um5.ac.ma/",
+                "logo": "./img/img_etab/EST-Sale\u0301.png"
+            },
+            {
+                "Nom": "FSJES Agdal",
+                "site": "http://fsjes-agdal.um5.ac.ma/",
+                "logo": "./img/img_etab/FSJES-Agdal.png"
+            },
+            {
+                "Nom": "FSJES Souissi",
+                "site": "http://fsjes-souissi.um5.ac.ma/",
+                "logo": "./img/img_etab/FSJES-Souissi.png"
+            },
+            {
+                "Nom": "FSJES Sal\u00e9",
+                "site": "http://fsjes-sale.um5.ac.ma/",
+                "logo": "./img/img_etab/fsjes-sale\u0301.png"
+            },
+            {
+                "Nom": "FS Rabat",
+                "site": "http://www.fsr.ac.ma/",
+                "logo": "./img/img_etab/FS-rabat.png"
+            },
+            {
+                "Nom": "FSE Rabat",
+                "site": "http://fse.um5.ac.ma/",
+                "logo": "./img/img_etab/FSE-rabat.png"
+            },
+            {
+                "Nom": "ENS Rabat",
+                "site": "http://ens.um5.ac.ma/",
+                "logo": "./img/img_etab/ENS-rabat.png"
+            },
+            {
+                "Nom": "FLSH Rabat",
+                "site": "http://www.flshr.ac.ma/",
+                "logo": "./img/img_etab/fslh-rabat.png"
+            }
+        ],
+        "id": 1,
+        "coordinates": [
+            33.98960417675969,
+            -6.858230516316849
+        ],
+        "img": "./img/images/t1.jfif",
+        "logo": "./img/img13.png",
+        "region": "Rabat-Sale-Kenitra"
+    },
+    {
+        "nom": "Ibn Zohr - Agadir",
+        "site": "http://www.uiz.ac.ma/",
+        "ville": "Agadir",
+        "info": {
+            "creation": "1989",
+            "nb_new": "30439",
+            "total": "125208",
+            "nb_etab": "15",
+            "nb_etranger": "462"
+        },
+        "etabs": [
+            {
+                "Nom": "ENCG Agadir",
+                "site": "https://www.encg-agadir.ac.ma/",
+                "logo": "./img/img_etab/encg-agadir-.png"
+            },
+            {
+                "Nom": "ENSA Agadir",
+                "site": "http://www.ensa-agadir.ac.ma/",
+                "logo": "./img/img_etab/ENSA-AGADIR-1.png"
+            },
+            {
+                "Nom": "FMP Agadir",
+                "site": "http://fmpa.uiz.ac.ma/",
+                "logo": "./img/img_etab/fmpa.png"
+            },
+            {
+                "Nom": "ENCG Dakhla",
+                "site": "http://www.encg-dakhla.ac.ma/",
+                "logo": "./img/img_etab/encg-dakhla-1.png"
+            },
+            {
+                "Nom": "FSJES Agadir",
+                "site": "http://www.fsjes-agadir.org/",
+                "logo": "./img/img_etab/fsjes-agadir.png"
+            },
+            {
+                "Nom": "FSJES Ait Melloul",
+                "site": "http://cuam.uiz.ac.ma/",
+                "logo": "./img/img_etab/fsjes-ait-melloul.png"
+            },
+            {
+                "Nom": "FS Agadir",
+                "site": "http://www.fsa.ac.ma/",
+                "logo": "./img/img_etab/FS-Agadir.png"
+            },
+            {
+                "Nom": "Facult\u00e9 Chari\u00e2a Smara",
+                "site": "http://www.uiz.ac.ma/faculte-chariaa-smara",
+                "logo": "./img/img_etab/FC-Smara.png"
+            },
+            {
+                "Nom": "Facult\u00e9 Chari\u00e2a Ait Melloul",
+                "site": "http://www.chariaa-agadir.ac.ma/",
+                "logo": "./img/img_etab/FC-ait-melloul.png"
+            },
+            {
+                "Nom": "EST Agadir",
+                "site": "http://www.esta.ac.ma/",
+                "logo": "./img/img_etab/est-agadir.png"
+            },
+            {
+                "Nom": "EST Guelmim",
+                "site": "http://www.estg.ac.ma/",
+                "logo": "./img/img_etab/EST-Guelmim.png"
+            },
+            {
+                "Nom": "EST La\u00e2youne",
+                "site": "http://w2.estl.ac.ma/",
+                "logo": "./img/img_etab/EST-Laayoune.png"
+            },
+            {
+                "Nom": "FLSH Agadir",
+                "site": "http://www.flsh-agadir.ac.ma/",
+                "logo": "./img/img_etab/FLSH-Agadir.png"
+            },
+            {
+                "Nom": "FP Ouarzazate",
+                "site": "https://www.fpo.ma/",
+                "logo": "./img/img_etab/poly-ourzazate.png"
+            },
+            {
+                "Nom": "FP Taroudant",
+                "site": "http://www.fpt.ac.ma/",
+                "logo": "./img/img_etab/poly-taroudant.png"
+            }
+        ],
+        "id": 12,
+        "coordinates": [
+            30.41057020558376,
+            -9.543531220768958
+        ],
+        "img": "./img/images/t12.png",
+        "logo": "./img/img12.png",
+        "region": "Souss Massa"
+    }
+]

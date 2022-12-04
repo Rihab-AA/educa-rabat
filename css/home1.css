@@ -1,0 +1,193 @@
+@import url('../css/variables.css');
+
+
+body
+    {
+        background-color: var(--white);
+        font-family: 'Lato', sans-serif;
+        
+    }
+
+
+/* =================================== HEADER ================================ */
+/* NAV : */
+
+header
+    {
+        height: 100vh;
+        position:  relative;
+
+    }
+
+header .nav
+    {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+header .nav .brand h1
+    {
+        font-size: 22px;
+        
+    }
+header .nav .brand h1  a    
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+header .nav .brand img
+    {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+
+header .nav .brand h1 a span:nth-child(3)
+    {
+        color: var(--vert1);
+    }
+
+header .navbar
+    {
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+header .navbar a
+    {
+        padding: 5px;
+        margin-right: 5px;
+        color: var(--c5);
+    }
+
+
+
+
+header .button_container
+    {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        cursor: pointer;
+
+    }
+header .button_container .left
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 50px 35px;
+        background-color: var(--white);
+        width: 170px;
+        height: 280px;
+    }
+header .button_container .left span
+    {
+        text-align: left;
+        font-weight: 700;
+    }
+header .button_container .left span:nth-child(1)
+    {
+        font-size: 14px;
+        margin-bottom: 40px;
+        color: var(--gris2);
+    }
+header .button_container .left span:nth-child(2)
+    {
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+header .button_container .left img
+    {
+        width: 30px;
+        height: 15px;
+        object-fit: contain;
+        rotate: 45deg;
+    }
+
+header .button_container .right
+    {
+        width: 130px;
+        background-color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+#hero
+    {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-color: black;
+        /* background: #000;
+        position: relative;
+        overflow: hidden; */
+    }
+
+/* #hero .img
+    { 
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+#hero .first
+    {
+        transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);
+        opacity: 1;
+        transition: transform 1s ease;
+    
+    }
+#hero .last
+    {
+        transform: translate(-50%, -50%) matrix(1.2, 0, 0, 1.2, 0, 0);
+        opacity: 0.001;
+        transition: transform 1s ease;
+    } */
+
+
+header .text 
+    {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+    }
+header .text h4
+    {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #19c880;
+        letter-spacing: 0.1em;
+    }
+
+header .text h1
+    {
+        margin-top: 12px;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+    }
+header .text p
+    {
+        margin-top: 8px;
+        color: #fff;
+    }

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="shortcut icon" href="images\mortier.ico" />
+    <!-- ICONS : -->
+    <script src="https://kit.fontawesome.com/a10b50916d.js" crossorigin="anonymous"></script>
+        
+    <!-- FONTS : -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS : -->
+	<link rel="stylesheet" crossorigin="" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="./js/plugins/leaflet-sidebar.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <input type="text" id="x" style="display: none;" value="ss">
+    <input type="text" id="y" style="display: none;" value="standard">
+    <input type="text" id="z" style="display: none;" value="total">
+
+   
+    
+    <div class="map_container">
+        <div class="sidebar">
+            <div class="bar">
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="filter" id="filter">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+            </div>
+            <div id="empty">
+                <h1>
+                    PLEASE CLICK ON SOMETHING
+                </h1>
+            </div>
+            <div id="content">
+                <div class="img">
+                    <img id="img_univ" src="./img/t1.jfif">
+                </div>
+                <div class="details">
+                    <div class="nom">
+                        <div class="logo">
+                            <img id="logo_univ" src="./img/img13.png">
+                        </div>
+                        <h1 id="nom_univ">
+                            Mohammed V Rabat
+                        </h1>
+                    </div>
+                    <div class="sepa">
+                        <div class="hr"></div>
+                        <div class="sepa_tit">
+                            <h2>
+                                Etablissements
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="etabs" id="etabs">
+                        <!-- 
+                        <div class="cards">
+                            <img src="./img/img_etab/ensam-casa.png" alt="">
+                            <div class="card_detail">
+                                <div class="title">
+                                    <h2>ENSAM</h2>
+                                </div>
+                                <div class="site">
+                                    <a href="">Savoir +</a>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                    <div class="sepa">
+                        <div class="hr"></div>
+                        <div class="sepa_tit">
+                            <h2>
+                                Statistics
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="resultat">
+                        <div>
+                            <img src="./img/icons/position_3.png"><span>Ville: </span><h6 id="ville_univ">Rabat</h6>
+                        </div>
+                        <div>
+                            <div class="tot">
+                                <img src="./img/icons/student_2.png"><span>Nombre des Etudiants: </span><h6 id="nb_univ">10000</h6>
+                            </div>
+                            <div class="infos">
+                                <div>
+                                    <span>Garcon:</span> <h6 id="g_univ">1000</h6>
+                                </div>
+                                <div>
+                                    <span>Fille:</span> <h6 id="f_univ">1000</h6>
+                                </div>
+                                <div>
+                                    <span>Etranger:</span> <h6 id="e_univ">1000</h6>
+                                </div>
+                                <div>
+                                    <span>Nouveau:</span> <h6 id="n_univ">1000</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./img/icons/idea_1.png"><span>Date de Création: </span><h6 id="creat_univ">1966</h6>
+                        </div>
+                        <div>
+                            <img src="./img/icons/building_1.png"><span>Nombre des Etablissement: </span><h6 id="etab_univ">10</h6>
+                        </div>
+                        <div>
+                            <img src="./img/icons/link_3.png"><span>Site: </span><a href="" id="site_href" target="_blank"><h6 id="site_univ">http://univ.com</h6><img src="./img/icons/link_12.png" alt=""></a>
+                        </div>
+                        <div>
+                            <img src="./img/icons/public_1.png"><span>Secteur: </span><h6 id="sec_univ">Public</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content_filter">
+                <div class="bar_title">
+                    <h1>FONCTIONS</h1>
+                </div>
+                <div class="cont">
+                    <div class="sepa">
+                        <div class="sepa_tit">
+                            <h2>
+                                Display
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="select">
+                        <div class="selection">
+                            <label class="container">
+                                <input type="radio" name="radio" value="standard" checked>
+                                <span class="checkmark"></span>
+                                Standard
+                            </label>
+                            <label class="container">
+                                <input type="radio" name="radio" value="coroplette">
+                                <span class="checkmark"></span>
+                                Coroplette
+                            </label>
+                            <label class="container">
+                                <input type="radio" name="radio" value="symbole">
+                                <span class="checkmark"></span>
+                                Symbole
+                            </label>
+                            <button id="display">Applie</button>
+                        </div>
+                    </div>
+                    <div class="sepa">
+                        <div class="hr"></div>
+                        <div class="sepa_tit">
+                            <h2>
+                                Search
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search_inp">
+                            <input type="text" name="" id="" placeholder="Université...">
+                            <div class="box"></div>
+                            <div class="icon"><img src="./img/icons/search_4.png"></div>
+                        </div>
+                    </div>
+                    <div class="sepa">
+                        <div class="hr"></div>
+                        <div class="sepa_tit">
+                            <h2>
+                                Requete
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="requete">
+                        <select name="requete" id="">
+                            <option value="0">chose a Requete</option>
+                            <option value="1">SELECT ST_AsGeoJSON(univ) FROM bd, region WHERE st_contains(region, univ) and region.nom = "Marrackech"</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        
+        <div id="res_select">
+            <h2>INFOS</h2>
+            <div class="d">
+                <div>
+                    <img src="./img/icons/position_3.png"><span>Region: </span><h6 id="select_reg">Region</h6>
+                </div>
+                <div>
+                    <img src="./img/icons/student_2.png"><span>Nombre d'Etudiants: </span><h6 id="select_nb">10000</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="slect_var">
+            <div class="title">
+                <h2>
+                    Select
+                </h2>
+            </div>
+            <div class="var">
+                <label>
+                    <input type="radio" name="var" value="total" checked>
+                    <span class="checkmark"></span>
+                    Nombre d'Etudiants
+                </label>
+                <label>
+                    <input type="radio" name="var" value="nb_etranger">
+                    <span class="checkmark"></span>
+                    Nombre d'Etranger
+                </label>
+                <label>
+                    <input type="radio" name="var" value="nb_new">
+                    <span class="checkmark"></span>
+                    Nombre des Nouveaux Etudiants
+                </label>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+</body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" crossorigin=""></script>
+    <script src="./js/plugins/leaflet-sidebar.min.js"></script>
+    <script src="./js/map.js" type="module">
+        
+    </script>
+    <script>
+        
+
+     
+
+
+
+    </script>
+</html>

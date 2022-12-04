@@ -1,0 +1,107 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 2
+        },
+        "geometry": {
+          "coordinates": [
+            -7.727668741096011,
+            33.24706355034398
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 7
+        },
+        "geometry": {
+          "coordinates": [
+            -5.130674400359538,
+            35.1265554067421
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 6
+        },
+        "geometry": {
+          "coordinates": [
+            -2.3216330645820733,
+            34.10464909936262
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 5
+        },
+        "geometry": {
+          "coordinates": [
+            -6.283974447035689,
+            32.71371514464883
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3
+        },
+        "geometry": {
+          "coordinates": [
+            -4.645414601157057,
+            33.83712669787886
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 4
+        },
+        "geometry": {
+          "coordinates": [
+            -8.379476685291223,
+            31.812180125574997
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 1
+        },
+        "geometry": {
+          "coordinates": [
+            -6.527658753720402,
+            34.06001146271599
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {"id": 12},
+        "geometry": {
+          "coordinates": [
+            -9.285071998256626,
+            30.244423293565404
+          ],
+          "type": "Point"
+        }
+      }
+    ]
+  }
