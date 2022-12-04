@@ -1,0 +1,600 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.85626124,34.01837342 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Royale du Service de SantÃ© militaire",
+    "abrv":"ERSSM",
+    "disc":"Lâ€™Ecole Royale du Service de SantÃ© Militaire (Lâ€™ERSSM Rabat) est un Ã©tablissement relevant du secteur militaire au Maroc, dont la vocation est de former des mÃ©decins, spÃ©cialistes et chirurgiens, ainsi que des infirmiers qui sont destinÃ©s Ã  travailler avec les forces armÃ©es royales.",
+    "filieres":"-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans,-MÃ©decine gÃ©nÃ©rale avec un cursus de 7 ans\n-MÃ©decine dentaire avec un cursus de 5 ans\n-MÃ©decine vÃ©tÃ©rinaire avec un cursus de 6 ans\n-Pharmacie avec un cursus de 2 ans",
+    "site":"",
+    "type":"militaire",
+    "icon":"militaire.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.846855748,34.00590903 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Centre dâ€™Instruction Service Social des Far RabatÂ ",
+    "abrv":"CISSF",
+    "disc":"",
+    "filieres":"sous officier d'administration 3Ans ",
+    "site":"",
+    "type":"militaire",
+    "icon":"militaire.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.880167603,33.96844725 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Centre dâ€™Orientation et de Planification de lâ€™Education Rabat",
+    "abrv":"COPE",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.858856824,33.98980186 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Centre pÃ©dagogique RÃ©gional Rabat",
+    "abrv":"CPR",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.825920637,33.98059576 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Normale SupÃ©rieure RabatÂ ",
+    "abrv":"ENS",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.877365109,33.96910089 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Normale SupÃ©rieure de lâ€™Enseignement Technique Rabat",
+    "abrv":"ENSET",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.85744295,34.00757227 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Centre de Formation des Inspecteurs de lâ€™Enseignement Rabat",
+    "abrv":"CFIE",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.83996558,34.00711765 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"FacultÃ© des Lettres et des Sciences Humaines â€“ RabatÂ ",
+    "abrv":"FLSH",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.87032818,33.98092966 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"FacultÃ© de MÃ©decine Dentaire â€“ Rabat",
+    "abrv":"FMD",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.855981367,33.98340803 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"FacultÃ© de MÃ©decine et de Pharmacie",
+    "abrv":"FMP",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.838228065,34.00816291 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"FacultÃ© des Sciences â€“ Rabat",
+    "abrv":"FS",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.853568798,33.99768841 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Mohammadia d'IngÃ©nieurs",
+    "abrv":"EMI",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.853568798,33.99768841 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Nationale de l'Industrie MinÃ©rale",
+    "abrv":"ENIM",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.867548251,33.98446298 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Nationale SupÃ©rieure d'Informatique et d'Analyse des SystÃ¨mes",
+    "abrv":"ENSIAS",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.865307948,33.98231225 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole des Sciences de l'Information",
+    "abrv":"ESI",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.861369513,33.98704399 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Nationale d'Architecture",
+    "abrv":"ENA",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.869955046,33.98667249 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"(Ecole de Gouvernance et d'Economie de Rabat)",
+    "abrv":"EGE",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.880508537,33.95772332 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole des Hautes Etudes Commerciales",
+    "abrv":"HEC",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.826619592,33.97839218 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut des Hautes Etudes de Management",
+    "abrv":"HEM",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.866760894,33.97667146 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut agronomique et vÃ©tÃ©rinaire Hassan II",
+    "abrv":"IAV",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.862729491,33.98570171 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut d'Etudes et de Recherches pour l'Arabisation",
+    "abrv":"IERA",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.86722641,33.98063262 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut National des Postes et TÃ©lÃ©communications",
+    "abrv":"INPT",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"public",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.849573849,33.99517302 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"High Technology School in Morocco",
+    "abrv":"High-tech",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.845628834,34.0051031 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut supÃ©rieur d'ingÃ©nierie et des affaires",
+    "abrv":"isga",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.847861719,34.0026842 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole SupÃ©rieure des Sciences et Technologies de l'IngÃ©nierie",
+    "abrv":"ESSTI",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.837575533,33.97195265 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Marocaine des Sciences de l'IngÃ©nieur",
+    "abrv":"EMSI souissi",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.847515871,34.00894633 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"ecole d'art et design",
+    "abrv":"EAD",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"universite.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.874645336,33.97308529 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Centre National pour la Recherche Scientifique et Technique)",
+    "abrv":"CNRST",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.860910979,33.98796576 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Institut National d'AmÃ©nagement et d'Urbanisme",
+    "abrv":"INAU",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.845113769,34.00510296 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"L'Ecole Marocaine d'IngÃ©nierie",
+    "abrv":"EMG",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.827688082,33.98594638 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Lâ€™Ecole Marocaine de Banque et de Commerce International",
+    "abrv":"EMBCI",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.851124356,34.00056388 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Marocaine des Sciences de l'IngÃ©nieur",
+    "abrv":"",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.844428126,34.00241236 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ecole Marocaine des Sciences de l'IngÃ©nieur",
+    "abrv":"emsi agdal",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.841230247,34.03940078 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ã‰cole SupÃ©rieure de Design Graphique et Digital & Architecture d'intÃ©rieur",
+    "abrv":"art'com",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -6.839187338,34.01438958 ]
+    },
+    "properties": {
+    "Institus/Ecoles":"Ã‰cole Nationale SupÃ©rieure de l'Administration",
+    "abrv":"ENSA",
+    "disc":"",
+    "filieres":"",
+    "site":"",
+    "type":"Privé",
+    "icon":"prive.png",
+    "iconsize":[50,50]
+    }
+  }
+]
+}
